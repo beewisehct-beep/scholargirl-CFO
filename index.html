@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Scholargirl CFO · Business</title>
+<title>My Scholargirl</title>
 <style>
 :root{--bg:#f7efe9;--card:#fffaf6;--ink:#2b1d14;--mute:#7a6555;--line:#e8d9cc;--rose:#9b3d5a;--rose-l:#f1d9df;--green:#5b7a3a;--green-l:#dfe8d2;--tan:#c9a27e;--brown:#5a3a28;--side:#f1e4da}
 @media(prefers-color-scheme:dark){:root{--bg:#1d1612;--card:#2a201a;--ink:#f3e8de;--mute:#b9a493;--line:#40322a;--rose:#e08aa3;--rose-l:#4a2a35;--green:#9cc46d;--green-l:#34402a;--tan:#c9a27e;--brown:#d9b99b;--side:#241b15}}
@@ -9,7 +9,7 @@ body{background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system
 .app{display:grid;grid-template-columns:190px 1fr;min-height:100vh}
 @media(max-width:820px){.app{grid-template-columns:1fr}.side{flex-direction:row!important;align-items:center;overflow-x:auto;padding:10px 12px!important}.side .brand{margin:0 8px 0 0!important}.side .tag{display:none}}
 .side{background:var(--side);border-right:1px solid var(--line);padding:20px 14px;display:flex;flex-direction:column;gap:4px}
-.brand{font:600 20px Georgia,serif;margin-bottom:2px;color:var(--rose)}.tag{font-size:11px;color:var(--mute);margin-bottom:16px}
+.brand{font:600 18px Georgia,serif;margin-bottom:2px;color:var(--rose)}.tag{font-size:11px;color:var(--mute);margin-bottom:16px}
 .nav{background:none;border:0;color:var(--ink);text-align:left;padding:9px 12px;border-radius:10px;font:inherit;cursor:pointer;white-space:nowrap}
 .nav.on{background:var(--rose-l);color:var(--rose);font-weight:600}
 main{padding:22px 20px 50px;max-width:1080px;width:100%}
@@ -49,9 +49,30 @@ dialog label{display:block;font-size:12px;color:var(--mute);margin:10px 0 3px;fo
 .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.acts{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
 footer{margin-top:20px;color:var(--mute);font-size:12px}
 .view{display:none}.view.on{display:block}
+
+.chk{display:flex;gap:8px;align-items:flex-start;padding:5px 0;font-size:14px;cursor:pointer}.chk input{width:auto;margin-top:4px}
+.chk.done span{text-decoration:line-through;color:var(--mute)}
+.grp{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--rose);font-weight:600;margin:12px 0 2px}
+.course{border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:var(--card)}
+.course h3{font:600 16px Georgia,serif;margin-bottom:2px}.price{font:600 22px Georgia,serif;color:var(--rose)}
+.tpl{border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px;background:var(--card)}
+.tpl .body{white-space:pre-wrap;font-size:14px;margin:6px 0 8px}
+.warn{background:var(--rose-l);color:var(--ink);border-radius:10px;padding:8px 12px;font-size:13px;margin:8px 0}
+.ok{color:var(--green);font-weight:600}.bad{color:var(--rose);font-weight:600}
+td input.cell{width:78px;padding:4px 6px;text-align:right}
+.tabs-note{font-size:12px;color:var(--mute)}
+iframe.cal{width:100%;height:480px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.g1{grid-template-columns:1fr}.k4{grid-template-columns:repeat(4,1fr)}@media(max-width:820px){.k4{grid-template-columns:1fr 1fr}}
+.stagebar{display:flex;height:30px;border-radius:8px;overflow:hidden;margin:8px 0}.stagebar div{display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;font-weight:600;min-width:0}
+a.btn{text-decoration:none;display:inline-block}
+
+.qdoc{background:#fff;color:#2b1d14;border:1px solid var(--line);border-radius:12px;padding:22px;font-size:14px}.qdoc mark{background:#fff176}
+.qhead{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:3px solid #5a3a28;padding-bottom:10px}.qbrand{letter-spacing:.14em;font-size:11px;color:#8a5a3b;font-weight:600}.qtitle{font:600 22px Georgia,serif;color:#5a3a28}.qmeta{text-align:right;font-size:13px}
+table.qt{width:100%;border-collapse:collapse}table.qt th{background:#5a3a28;color:#fff;font-size:12px;padding:6px}table.qt td,table.qt tfoot td{border-bottom:1px solid #e8d9cc;padding:6px}
+@media print{body.printq .side,body.printq main>.view,body.printq footer{display:none!important}body.printq main>#v-quotes{display:block!important}body.printq #v-quotes>header,body.printq #v-quotes>.grid>#qForm,body.printq #v-quotes>.card{display:none!important}body.printq .app{display:block}body.printq main{padding:0;max-width:none}body.printq #v-quotes>.grid{display:block;margin:0}body.printq #qPrevWrap{border:0;padding:0;background:#fff}body.printq{background:#fff}}
 </style></head><body><div class="app">
-<nav class="side"><div class="brand">My CFO</div><div class="tag">Scholargirl by Stamp</div>
-<button class="nav on" data-v="business">Business</button><button class="nav" data-v="income">Income list</button><button class="nav" data-v="expenses">Expenses</button><button class="nav" data-v="settings">Settings</button></nav>
+<nav class="side"><div class="brand">My Scholargirl</div><div class="tag">by Stamp</div>
+<button class="nav on" data-v="business">Business</button><button class="nav" data-v="customers">Customers</button><button class="nav" data-v="schedule">Schedule</button><button class="nav" data-v="courses">Courses</button><button class="nav" data-v="cost">Cost per hour</button><button class="nav" data-v="plan">Pricing plan</button><button class="nav" data-v="quotes">Quotations</button><button class="nav" data-v="reviews">Reviews</button><button class="nav" data-v="ops">Operations</button><button class="nav" data-v="assistant">Assistant</button><button class="nav" data-v="income">Income list</button><button class="nav" data-v="expenses">Expenses</button><button class="nav" data-v="settings">Settings</button></nav>
 <main>
 <section class="view on" id="v-business">
 <header><div><h1>Business</h1><div class="sub">Your side income, expenses, set-aside and forecast, all in one place. Amounts in THB.</div></div>
@@ -61,6 +82,7 @@ footer{margin-top:20px;color:var(--mute);font-size:12px}
  <div class="card green"><div class="lbl" style="color:var(--green)">Profit before set-aside</div><div class="big" id="kProfit"></div><div class="note">Revenue minus expenses</div><div class="mini"><div><span class="note">Expenses</span><b id="kExp"></b></div><div><span class="note">Margin</span><b id="kMargin"></b></div></div></div>
  <div class="card"><div class="lbl">Tax set-aside (estimate)</div><div class="big" id="kTax"></div><div class="note" id="kTaxN"></div></div>
 </div>
+<div class="card" id="goalBox" style="margin-bottom:14px"></div>
 <div class="grid k2">
  <div class="card"><h2>Revenue trend</h2><div id="trend"></div><div class="leg"><span style="--c:var(--rose)">Received per month</span><span style="--c:var(--tan)">Average</span></div></div>
  <div class="card"><h2>Income by channel</h2><div class="donut"><svg id="donut" width="130" height="130" viewBox="0 0 42 42"></svg><div id="donutLeg" class="note" style="line-height:1.9"></div></div><div id="chBars"></div></div>
@@ -75,6 +97,62 @@ footer{margin-top:20px;color:var(--mute);font-size:12px}
 </div>
 </section>
 
+
+<section class="view" id="v-customers"><header><div><h1>Customers</h1><div class="sub">Where enquiries come from, how many book, how many pay.</div></div><button class="btn" data-add="lead">+ Add enquiry</button></header>
+<div class="grid k4"><div class="card"><div class="lbl">Enquiries</div><div class="big" id="cL"></div></div><div class="card"><div class="lbl">Booked a consult</div><div class="big" id="cB"></div></div><div class="card green"><div class="lbl" style="color:var(--green)">Paid</div><div class="big" id="cP"></div></div><div class="card rose"><div class="lbl">Enquiry to paid</div><div class="big" id="cC"></div></div></div>
+<div class="grid k2"><div class="card"><h2>Funnel</h2><div id="funnel"></div><div class="note">Stages: Enquiry, Consult booked, Paid. Lost = decided not to go ahead.</div></div><div class="card"><h2>Insights</h2><div id="cIns"></div></div></div>
+<div class="card tw" style="margin-bottom:14px"><h2>By channel</h2><table><thead><tr><th>Channel</th><th class="n">Enquiries</th><th class="n">Booked</th><th class="n">Paid</th><th class="n">Conversion</th><th class="n">Revenue received</th><th class="n">Per paying customer</th></tr></thead><tbody id="chRows"></tbody></table></div>
+<div class="card tw"><h2>Enquiry list</h2><table><thead><tr><th>Date</th><th>Who</th><th>Channel</th><th>Interested in</th><th>Stage</th><th></th></tr></thead><tbody id="leadRows"></tbody></table></div></section>
+
+<section class="view" id="v-schedule"><header><div><h1>Schedule</h1><div class="sub">Sessions, Google Calendar booking and expected income.</div></div><div class="tools"><a class="btn alt" id="bookLink" target="_blank" rel="noopener noreferrer">Open booking link</a><button class="btn alt" data-add="block">+ Block time</button><button class="btn" data-add="session">+ Add session</button></div></header>
+<div id="conf"></div>
+<div class="grid k3"><div class="card green"><div class="lbl" style="color:var(--green)">Expected from sessions</div><div class="big" id="sExp"></div><div class="note">Scheduled, not yet paid</div></div><div class="card"><div class="lbl">Next 7 days</div><div class="big" id="sWk"></div><div class="note" id="sWkN"></div></div><div class="card rose"><div class="lbl">Hours this month</div><div class="big" id="sMo"></div><div class="note" id="sMoN"></div></div></div>
+<div class="grid k2"><div class="card tw"><h2>Upcoming sessions</h2><table><thead><tr><th>When</th><th>Client</th><th>Course</th><th class="n">Hrs</th><th class="n">Price</th><th></th></tr></thead><tbody id="sesRows"></tbody></table></div>
+<div class="card"><h2>Before every session</h2><div class="note">Recheck each time. Tick as you go, then reset for the next one.</div><div id="chk"></div><div class="tools" style="margin-top:10px"><button class="btn alt sm" id="chkReset">Reset checklist</button></div></div></div>
+<div class="card tw" style="margin-bottom:14px"><h2>My calendar table</h2><div class="note" style="margin-bottom:6px">Sessions and blocked time together, with conflict checks (overlaps, tight gaps, long days).</div><table><thead><tr><th>Date</th><th>Time</th><th>Type</th><th>What</th><th>Check</th><th></th></tr></thead><tbody id="calRows"></tbody></table></div>
+<div class="card"><h2>Google Calendar</h2><div id="calBox"></div></div></section>
+
+<section class="view" id="v-courses"><header><div><h1>Courses</h1><div class="sub">What I offer, how each one runs, and what the client gets each week.</div></div></header>
+<div class="grid k3" id="courseCards"></div>
+<div class="card tw" style="margin-bottom:14px"><h2>IELTS Reading + Listening: 4-week structure</h2><table><thead><tr><th>Week</th><th>Focus</th><th>Client does</th><th>Stamp delivers</th></tr></thead><tbody id="struct"></tbody></table></div>
+<div class="grid k2"><div class="card"><h2>How my course differs: AI-tailored learning path</h2><div id="diff"></div></div><div class="card"><h2>What I do not do</h2><div id="dont"></div></div></div></section>
+
+<section class="view" id="v-cost"><header><div><h1>Cost per hour</h1><div class="sub">What each offer really earns per hour worked, after prep, review, tools and fees.</div></div><button class="btn alt" id="xlsx3">⬇ Excel report</button></header>
+<div class="card" style="margin-bottom:14px"><div class="two" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))"><div><label class="lbl">Target hourly rate (฿)</label><input id="sTarget" type="number" min="0"></div><div><label class="lbl">Monthly tools (AI etc.) ฿</label><input id="sTool" type="number" min="0"></div><div><label class="lbl">Other monthly cost ฿</label><input id="sOther" type="number" min="0"></div><div><label class="lbl">Working hours / month</label><input id="sWork" type="number" min="1"></div><div><label class="lbl">Platform fee %</label><input id="sFee" type="number" min="0" max="100" step="0.5"></div></div><div class="note" style="margin-top:6px">Tools and other costs are spread over your monthly working hours. Starter hours in the table are assumptions: edit them to match how long each offer really takes.</div></div>
+<div class="card tw"><table><thead><tr><th>Offer</th><th class="n">Price ฿</th><th class="n">Live h</th><th class="n">Prep h</th><th class="n">Review h</th><th class="n">Total h</th><th class="n">Fee ฿</th><th class="n">Tools ฿</th><th class="n">Net ฿</th><th class="n">Net / hour</th><th class="n">vs target</th></tr></thead><tbody id="costRows"></tbody></table></div>
+<div id="costIns" style="margin-top:14px" class="card"></div></section>
+
+<section class="view" id="v-assistant"><header><div><h1>Assistant</h1><div class="sub">Answer enquiries faster and recommend the right course.</div></div></header>
+<div class="grid k2"><div class="card"><h2>Course recommender</h2><label class="lbl">Client nickname</label><input id="rName" placeholder="e.g. Pure" maxlength="40">
+<div class="two"><div><label class="lbl" style="display:block;margin-top:10px">Goal</label><select id="rGoal"><option value="uk">Chevening / UK scholarship</option><option value="ocsc">OCSC / Thai government scholarship</option><option value="ielts">IELTS Reading + Listening</option><option value="essay">Essay / SOP review</option><option value="cv">CV review</option><option value="unsure">Not sure yet</option></select></div><div><label class="lbl" style="display:block;margin-top:10px">Support wanted</label><select id="rNeed"><option value="once">One-off questions</option><option value="ongoing">Ongoing support</option></select></div></div>
+<label class="chk" style="margin-top:8px"><input type="checkbox" id="rDraft"><span>Client already has a draft (essay / SOP / CV)</span></label>
+<div class="tools" style="margin-top:8px"><button class="btn" id="rGo">Recommend</button></div><div id="rOut" style="margin-top:12px"></div></div>
+<div class="card"><div class="tools" style="justify-content:space-between"><h2 style="margin:0">Reply templates</h2><button class="btn sm" data-add="tpl">+ New</button></div><div class="note" style="margin:6px 0 10px">Tokens: {name}, {booking}, {price_ielts}, {price_consult}, {price_monthly}. Uses the nickname typed in the recommender.</div><div id="tpls"></div></div></div></section>
+
+<section class="view" id="v-reviews"><header><div><h1>Reviews</h1><div class="sub">Client reviews from your Google Form. Contact details are never imported.</div></div><div class="tools"><a class="btn alt" id="formLink" target="_blank" rel="noopener noreferrer">Open review form</a><button class="btn alt" id="revImp">Import form CSV</button><input type="file" id="revFile" accept=".csv,text/csv,text/plain" hidden><button class="btn" data-add="review">+ Add review</button></div></header>
+<div class="grid k4"><div class="card"><div class="lbl">Reviews</div><div class="big" id="rvN"></div></div><div class="card green"><div class="lbl" style="color:var(--green)">Average rating</div><div class="big" id="rvA"></div></div><div class="card rose"><div class="lbl">Would recommend</div><div class="big" id="rvR"></div></div><div class="card"><div class="lbl">OK to publish</div><div class="big" id="rvP"></div></div></div>
+<div class="grid k2"><div class="card"><h2>Reviews</h2><div id="revList"></div></div><div class="card"><h2>What clients say</h2><div id="revIns"></div></div></div></section>
+
+<section class="view" id="v-plan"><header><div><h1>Pricing plan</h1><div class="sub">Package tiers THB 2,000 to 10,000, hours, price per hour and a 3-month plan (from your pricing workbook).</div></div></header>
+<div class="card tw" style="margin-bottom:14px"><h2>Tiers</h2><table><thead id="tierHead"></thead><tbody id="tierRows"></tbody></table><div class="note" id="tierNote" style="margin-top:8px"></div></div>
+<div class="card tw" style="margin-bottom:14px"><h2>3-month revenue plan</h2><table><thead id="planHead"></thead><tbody id="planRows"></tbody></table><div class="note" style="margin-top:8px">Customer counts are example assumptions, not a sales forecast. Capacity uses your working hours per month from the Cost per hour tab.</div></div>
+<div class="grid k2"><div class="card"><h2>Funnel needed</h2><div class="two"><div><label class="lbl">Close rate after first chat (%)</label><input id="pClose" type="number" min="1" max="100"></div><div><label class="lbl">Enquiry to booked chat (%)</label><input id="pBook" type="number" min="1" max="100"></div></div><div id="funNeed" style="margin-top:10px"></div></div><div class="card"><h2>Your actual rates</h2><div id="funAct"></div></div></div></section>
+
+<section class="view" id="v-quotes"><header><div><h1>Quotations</h1><div class="sub">Generate a quotation (ใบเสนอราคา), print or save as PDF, track status.</div></div></header>
+<div class="grid k2"><div class="card" id="qForm"><h2>New quotation</h2>
+<div class="two"><div><label class="lbl">Client</label><input id="qClient" maxlength="60" placeholder="nickname or name"></div><div><label class="lbl">Valid until</label><input id="qValid" type="date"></div></div>
+<label class="lbl" style="display:block;margin-top:10px">Items</label><div id="qItems"></div>
+<div class="tools" style="margin-top:6px"><select id="qAdd"><option value="">+ Add from offers...</option></select><button class="btn alt sm" id="qCustom">+ Custom line</button></div>
+<div class="two" style="margin-top:10px"><div><label class="lbl">Discount (฿)</label><input id="qDisc" type="number" min="0" value="0"></div><div><label class="lbl">Total</label><div class="big" style="font-size:24px" id="qTot"></div></div></div>
+<label class="lbl" style="display:block;margin-top:10px">Note to client (optional)</label><input id="qNote" maxlength="200">
+<label class="lbl" style="display:block;margin-top:10px">Terms (one per line; [[ ]] marks a gap to fill)</label><textarea id="qTerms" rows="7" style="width:100%;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px;color:var(--ink);font:inherit"></textarea>
+<div class="tools" style="margin-top:10px"><button class="btn" id="qSave">Save quotation</button><button class="btn alt" id="qPrint">Print / Save PDF</button><button class="btn alt" id="qCopy">Copy as text</button><button class="btn alt sm" id="qDef">Save terms as default</button></div></div>
+<div class="card" id="qPrevWrap"><div id="qPrev"></div></div></div>
+<div class="card tw"><h2>Saved quotations</h2><table><thead><tr><th>No.</th><th>Date</th><th>Client</th><th class="n">Total</th><th>Status</th><th></th></tr></thead><tbody id="qRows"></tbody></table></div></section>
+
+<section class="view" id="v-ops"><header><div><h1>Operations</h1><div class="sub">What the business needs behind the scenes. Tick items as you set them up.</div></div></header>
+<div class="card"><div id="opsList"></div><div class="warn">Tax, registration and employer-rule items are not legal advice. Check them with an accountant or the relevant authority.</div></div></section>
+
 <section class="view" id="v-income"><header><div><h1>Income list</h1><div class="sub">Every payment, received or expected.</div></div><button class="btn" data-add="income">+ Add income</button></header>
 <div class="card tw"><table><thead><tr><th>Date</th><th>Client</th><th>Channel</th><th>Note</th><th>Status</th><th class="n">Amount</th><th></th></tr></thead><tbody id="incRows"></tbody></table></div></section>
 
@@ -82,7 +160,7 @@ footer{margin-top:20px;color:var(--mute);font-size:12px}
 <div class="card tw"><table><thead><tr><th>Date</th><th>Category</th><th>Note</th><th class="n">Amount</th><th></th></tr></thead><tbody id="expRows"></tbody></table></div></section>
 
 <section class="view" id="v-settings"><header><div><h1>Settings</h1></div></header>
-<div class="card" style="max-width:520px"><label class="lbl">Tax set-aside rate (%)</label><input id="taxRate" type="number" min="0" max="100" step="0.5"><div class="note" style="margin-top:6px">Your own saving target, not tax advice. Check actual tax rules with the Revenue Department or an accountant.</div>
+<div class="card" style="max-width:520px"><label class="lbl">Tax set-aside rate (%)</label><input id="taxRate" type="number" min="0" max="100" step="0.5"><div class="two" style="margin-top:14px"><div><label class="lbl">Monthly income goal (฿)</label><input id="sGoal" type="number" min="0"></div><div></div></div><label class="lbl" style="margin-top:14px;display:block">Google Form review link (https)</label><input id="sForm" placeholder="https://forms.gle/..."><div class="two" style="margin-top:10px"><div><label class="lbl">Buffer between sessions (min)</label><input id="sBuf" type="number" min="0"></div><div><label class="lbl">Max live hours per day</label><input id="sMaxDay" type="number" min="1" step="0.5"></div></div><label class="lbl" style="margin-top:14px;display:block">Google Calendar booking link (appointment schedule, https)</label><input id="sBook" placeholder="https://calendar.app.google/..."><label class="lbl" style="margin-top:10px;display:block">Google Calendar embed link (optional)</label><input id="sEmbed" placeholder="https://calendar.google.com/calendar/embed?src=..."><div class="note" style="margin-top:6px">Your calendar cannot be read automatically. The booking link opens your Google booking page; the embed shows a calendar you have made public or shared. Sessions you add here get an Add-to-Google-Calendar button. Your own saving target, not tax advice. Check actual tax rules with the Revenue Department or an accountant.</div>
 <div style="margin-top:18px" class="tools"><button class="btn" id="xlsx2">Download Excel report</button><button class="btn alt" id="exp">Export backup (JSON)</button><button class="btn alt" id="imp">Import backup</button><input type="file" id="file" accept=".json" hidden><button class="btn alt" id="reset">Reset to starter data</button></div>
 <div class="note" style="margin-top:8px">Data is saved only in this browser. Use Export to back it up or move it to another device.</div></div></section>
 <footer>Clients shown by nickname only. Forecast and projected amounts are expectations, not guaranteed income.</footer>
@@ -100,6 +178,34 @@ footer{margin-top:20px;color:var(--mute);font-size:12px}
 <div><label>Date</label><input name="date" type="date" required></div><label>Note</label><input name="note" maxlength="80">
 <div class="acts"><button type="button" class="btn alt" data-close>Cancel</button><button class="btn" value="ok">Save</button></div></form></dialog>
 
+
+<dialog id="dlgSes"><form method="dialog" id="fSes"><h2 id="tSes">Add session</h2>
+<div class="two"><div><label>Client (nickname)</label><input name="client" required maxlength="60"></div><div><label>Course</label><select name="course" id="sesCourse"></select></div></div>
+<div class="two"><div><label>Date</label><input name="date" type="date" required></div><div><label>Start time</label><input name="time" type="time" value="19:00"></div></div>
+<div class="two"><div><label>Hours</label><input name="hours" type="number" min="0" step="0.25" value="1"></div><div><label>Price (฿)</label><input name="price" type="number" min="0" step="1" value="250"></div></div>
+<div class="two"><div><label>Channel</label><input name="channel" list="chList" maxlength="40"></div><div><label>Status</label><select name="status"><option value="scheduled">Scheduled</option><option value="done">Done</option><option value="cancelled">Cancelled</option></select></div></div>
+<label class="chk"><input type="checkbox" name="paid"><span>Paid</span></label>
+<div class="note">Saving adds or updates a linked entry in your income list (committed until paid).</div>
+<div class="acts"><button type="button" class="btn alt" data-close>Cancel</button><button class="btn" value="ok">Save</button></div></form></dialog>
+<dialog id="dlgLead"><form method="dialog" id="fLead"><h2 id="tLead">Add enquiry</h2>
+<div class="two"><div><label>Who (nickname)</label><input name="client" required maxlength="60"></div><div><label>Channel</label><input name="channel" list="chList" maxlength="40" placeholder="TikTok, LINE..."></div></div>
+<div class="two"><div><label>Date</label><input name="date" type="date" required></div><div><label>Stage</label><select name="stage"><option value="enquiry">Enquiry</option><option value="booked">Consult booked</option><option value="paid">Paid</option><option value="lost">Lost</option></select></div></div>
+<label>Interested in</label><input name="interest" maxlength="80" placeholder="e.g. IELTS Reading + Listening"><label>Note</label><input name="note" maxlength="120">
+<div class="acts"><button type="button" class="btn alt" data-close>Cancel</button><button class="btn" value="ok">Save</button></div></form></dialog>
+<dialog id="dlgTpl"><form method="dialog" id="fTpl"><h2 id="tTpl">Template</h2><label>Title</label><input name="title" required maxlength="60"><label>Message</label><textarea name="body" rows="9" required style="width:100%;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px;color:var(--ink);font:inherit"></textarea>
+<div class="acts"><button type="button" class="btn alt" data-close>Cancel</button><button class="btn" value="ok">Save</button></div></form></dialog>
+
+<dialog id="dlgRev"><form method="dialog" id="fRev"><h2 id="tRev">Add review</h2>
+<div class="two"><div><label>Name (nickname)</label><input name="name" required maxlength="40"></div><div><label>Date</label><input name="date" type="date" required></div></div>
+<div class="two"><div><label>Rating (1-5)</label><input name="rating" type="number" min="1" max="5" value="5"></div><div><label>Show publicly as</label><select name="display"><option value="none">Do not publish</option><option value="anon">ผู้ใช้บริการ (anonymous)</option><option value="first">First name only</option><option value="full">Name as given</option></select></div></div>
+<label>Review</label><input name="text" maxlength="500"><label>Review translation (if not Thai/English)</label><input name="gloss" maxlength="500">
+<label>Before: problem</label><input name="before" maxlength="300"><label>After: what they got</label><input name="after" maxlength="300"><label>Most useful</label><input name="best" maxlength="300"><label>To improve</label><input name="improve" maxlength="300">
+<label class="chk"><input type="checkbox" name="recommend" checked><span>Would recommend</span></label><label class="chk"><input type="checkbox" name="news"><span>Agreed to receive news (keep the email only in your private sheet)</span></label>
+<div class="acts"><button type="button" class="btn alt" data-close>Cancel</button><button class="btn" value="ok">Save</button></div></form></dialog>
+<dialog id="dlgBlk"><form method="dialog" id="fBlk"><h2 id="tBlk">Block time</h2><label>Title</label><input name="title" required maxlength="80" placeholder="e.g. Brisbane trip, exam, travel">
+<div class="two"><div><label>Start date</label><input name="date" type="date" required></div><div><label>End date</label><input name="end" type="date"></div></div>
+<div class="two"><div><label>Start time (optional)</label><input name="from" type="time"></div><div><label>End time (optional)</label><input name="to" type="time"></div></div>
+<div class="note">Leave times empty to block whole days.</div><div class="acts"><button type="button" class="btn alt" data-close>Cancel</button><button class="btn" value="ok">Save</button></div></form></dialog>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script>
 const KEY="scholargirl-cfo-v1";
@@ -120,6 +226,282 @@ const MN=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec
 const chan=i=>i.channel||"Not set";
 const uid=()=>"i"+Math.random().toString(36).slice(2,9);
 const fdate=d=>d?new Date(d+"T00:00").toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"}):"Date TBD";
+// ===== v3: back-office additions =====
+const COURSES0=[
+ {id:"ielts",name:"IELTS Reading + Listening (4 weeks)",price:3500,live:4,prep:4,review:4,note:"Plan + technique coaching. Client practises first, Stamp coaches what to fix."},
+ {id:"consult",name:"Personal consult (per hour)",price:250,live:1,prep:0.25,review:0,note:"1-hour consult, scholarship planning."},
+ {id:"monthly",name:"Monthly consult plan (max 15 h)",price:4499,live:15,prep:3.75,review:0,note:"Up to 15 hours a month plus quick questions."},
+ {id:"essay",name:"Essay / SOP review (from)",price:500,live:0,prep:0.5,review:1.5,note:"Client writes the draft, Stamp reviews and gives feedback."},
+ {id:"cv",name:"CV review, 1 page (from)",price:500,live:0,prep:0.25,review:1,note:"One-page CV review."},
+ {id:"checklist",name:"One-page consult checklist",price:300,live:0,prep:1,review:0,note:"One-page summary of a personal consult."}];
+const STRUCT=[
+ ["0 (before start)","Baseline","Take a timed full mock (Reading + Listening). Send score and wrong answers.","Read the log, find weak question types, set target per band."],
+ ["1","Plan + Reading types","Follow the plan, send the weekly mistake log.","1-hour planning call. Technique notes for the question types you miss most."],
+ ["2","Listening + timing","Practise Listening (podcast + past papers), timed Reading sets.","Feedback on the log. Fix list: what to change this week."],
+ ["3","Targeted fixes","Repeat the weakest types, one more timed set.","Coaching on the techniques that did not improve. Updated practice list."],
+ ["4","Retest + next plan","Retake a full timed mock.","Compare scores with week 0. 1-hour call to plan what comes next."]];
+const DIFF=["AI reads your mock results and mistake log and sorts errors by question type, so the plan is built around your pattern, not a generic syllabus.","AI helps generate extra practice targeted at the types you miss, which Stamp checks before you use it.","Stamp makes the decisions and does the coaching: what to fix, in what order, and how to change your technique.","A weekly deliverable every week (plan, feedback note, fix list), so you can see what you got for the price."];
+const DONT=["No writing essays, SOPs or answers for clients. Review and feedback only.","No guarantee of scores, scholarships or admissions.","No AI-written application text.","Figures about scholarships and deadlines are as told or from official sites: recheck before relying on them."];
+const CHK0=[["Connection","Speed test passed (video call quality)"],["Connection","Backup: phone hotspot ready"],["Connection","Laptop charged, headphones and mic work"],["Schedule","Date, time and time zone confirmed with client"],["Schedule","Calendar invite and meeting link sent and tested"],["Schedule","15-minute buffer before and after"],["Client prep","Mock score / mistake log received"],["Client prep","Goals and deadline noted"],["Delivery","This week's deliverable drafted"],["Delivery","Notes template open"],["Money","Payment confirmed or invoice sent"],["Facts","Official deadlines / criteria rechecked for anything I will quote"]];
+const TPL0=[
+ {id:"t1",title:"ราคา / แพ็กเกจ",body:"สวัสดีค่ะ {name} 😊 ตอนนี้พี่มีบริการดังนี้ค่ะ\n• ปรึกษารายชั่วโมง ชม.ละ {price_consult} บาท\n• IELTS Reading + Listening 4 สัปดาห์ {price_ielts} บาท\n• รายเดือน (สูงสุด 15 ชม.) {price_monthly} บาท\nสนใจแบบไหนบอกพี่ได้เลยค่ะ"},
+ {id:"t2",title:"รับเขียน essay / SOP ให้ไหม",body:"ขอบคุณที่สอบถามค่ะ {name} พี่ไม่รับเขียนให้นะคะ แต่รับรีวิวและให้ feedback จากร่างที่น้องเขียนเอง (ปรับ flow เพิ่ม/ตัดประเด็นให้โดนใจ) ถ้ามีร่างแล้วส่งมาได้เลยค่ะ"},
+ {id:"t3",title:"รับประกันผลไหม",body:"พี่ไม่รับประกันผลการสมัครหรือคะแนนนะคะ เป็นการแชร์วิธีที่พี่ใช้เตรียมเองและช่วยดูให้ ผลขึ้นกับการฝึกของน้องและเกณฑ์ของแต่ละทุนค่ะ"},
+ {id:"t4",title:"IELTS Reading + Listening",body:"สวัสดีค่ะ {name} คอร์ส 4 สัปดาห์: น้องทำ mock จับเวลาแล้วส่งคะแนน → พี่ช่วยวางแผน → น้องฝึกตามแผนแล้วส่ง log → พี่ติวเทคนิคที่ต้องแก้ → สัปดาห์สุดท้าย mock ซ้ำเทียบคะแนน ราคา {price_ielts} บาท หรือชั่วโมงละ {price_consult} บาทค่ะ ลองทำตามนี้ 1 เดือนก่อน พี่คิดว่าช่วยพัฒนาคะแนนได้ แต่ไม่รับประกันค่ะ"},
+ {id:"t5",title:"วิธีจองคิว",body:"จองเวลาคุยได้ที่ลิงก์นี้ค่ะ {booking} เลือกวัน-เวลาที่สะดวก แล้วพี่จะส่งลิงก์ประชุมให้ค่ะ"},
+ {id:"t6",title:"ก่อนวันคุย",body:"สวัสดีค่ะ {name} ก่อนคุยพรุ่งนี้ รบกวนเตรียม: 1) อินเทอร์เน็ตและหูฟังให้พร้อม 2) คะแนน mock หรือเอกสารที่อยากให้ดู 3) คำถามที่อยากถามที่สุด 3 ข้อ ขอบคุณค่ะ"},
+ {id:"t7",title:"หลังคุย: ส่งสรุป",body:"ขอบคุณที่คุยกันค่ะ {name} พี่จะส่งไฟล์สรุปและสิ่งที่ทำได้ใน 14 วันให้ภายใน [กำหนดวัน] ตัวเลข/กำหนดการตามที่เล่า ตรวจกับเว็บทางการอีกครั้งนะคะ"}];
+S.courses=S.courses||COURSES0;S.templates=S.templates||TPL0;S.checks=S.checks||{};
+S.sessions=S.sessions||[];
+S.leads=S.leads||[{id:"l1",client:"Mai",channel:"",date:TODAY,stage:"paid",interest:"Consult",note:""},{id:"l2",client:"Fluke",channel:"",date:TODAY,stage:"paid",interest:"Consult / package",note:""},{id:"l3",client:"Pure",channel:"",date:TODAY,stage:"enquiry",interest:"IELTS Reading + Listening",note:""}];
+S.cfg=Object.assign({goal:5000,target:400,tool:0,other:0,work:40,fee:0,book:"",embed:""},S.cfg||{});
+save();
+const cname=id=>(S.courses.find(c=>c.id===id)||{}).name||"";
+const okUrl=(u,host)=>{try{const x=new URL(u);return x.protocol==="https:"&&(!host||x.hostname===host)?x.href:""}catch(e){return""}};
+function syncSession(s){S.income=S.income.filter(i=>i.sid!==s.id);if(s.price>0&&s.status!=="cancelled")S.income.push({id:uid(),sid:s.id,client:s.client,channel:s.channel||"",note:cname(s.course)||"Session",amount:s.price,date:s.date,status:s.paid?"received":"committed"})}
+const pad=n=>String(n).padStart(2,"0");
+function gcal(s){const st=new Date(s.date+"T"+(s.time||"19:00"));const en=new Date(st.getTime()+(s.hours||1)*3600000);const f=d=>d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+"T"+pad(d.getHours())+pad(d.getMinutes())+"00";
+ return "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent((cname(s.course)||"Session")+": "+s.client)+"&dates="+f(st)+"/"+f(en)+"&ctz=Asia%2FBangkok&details="+encodeURIComponent("Scholargirl session")}
+const STG={enquiry:"Enquiry",booked:"Consult booked",paid:"Paid",lost:"Lost"};
+function fillTok(t,name){const g=id=>(S.courses.find(c=>c.id===id)||{}).price;return t.replace(/\{name\}/g,name||"น้อง").replace(/\{booking\}/g,S.cfg.book||"[ใส่ลิงก์จอง]").replace(/\{review\}/g,S.cfg.formUrl||"[ใส่ลิงก์ฟอร์มรีวิว]").replace(/\{price_(\w+)\}/g,(m,id)=>g(id)!=null?Number(g(id)).toLocaleString("en-US"):m)}
+function costRow(c){const c1=S.cfg,tot=(+c.live||0)+(+c.prep||0)+(+c.review||0),fee=c.price*(+c1.fee||0)/100,tool=c1.work>0?tot*((+c1.tool||0)+(+c1.other||0))/c1.work:0,net=c.price-fee-tool,nph=tot?net/tot:0;return{tot,fee,tool,net,nph,vs:nph-(+c1.target||0),gross:c.live?c.price/c.live:0}}
+function render2(){
+ const cf=S.cfg;
+ // settings fields
+ const set=(id,v)=>{const e=$(id);if(e&&document.activeElement!==e)e.value=v};
+ set("sGoal",cf.goal);set("sBook",cf.book);set("sEmbed",cf.embed);set("sTarget",cf.target);set("sTool",cf.tool);set("sOther",cf.other);set("sWork",cf.work);set("sFee",cf.fee);
+ // sessions
+ const nowD=new Date(),T=iso(nowD),in7=iso(new Date(nowD.getTime()+7*864e5));
+ const ses=[...S.sessions].sort((a,b)=>(a.date+(a.time||"")).localeCompare(b.date+(b.time||"")));
+ const upc=ses.filter(x=>x.status==="scheduled"&&x.date>=T);
+ $("sExp").textContent=fmt(upc.filter(x=>!x.paid).reduce((a,x)=>a+x.price,0));
+ const w=upc.filter(x=>x.date<=in7);$("sWk").textContent=w.length+" session"+(w.length==1?"":"s");$("sWkN").textContent=w.reduce((a,x)=>a+x.hours,0)+" h of live time";
+ const mk=T.slice(0,7),mh=S.sessions.filter(x=>x.date.slice(0,7)===mk&&x.status!=="cancelled").reduce((a,x)=>a+x.hours,0);$("sMo").textContent=mh+" h";$("sMoN").textContent="of "+cf.work+" working hours ("+Math.round(mh/Math.max(1,cf.work)*100)+"%)";
+ $("sesRows").innerHTML=ses.filter(x=>x.status!=="cancelled").map(x=>`<tr><td>${fdate(x.date)}<br><span class="note">${esc(x.time||"")}</span></td><td>${esc(x.client)}</td><td>${esc(cname(x.course))}</td><td class="n">${x.hours}</td><td class="n">${fmt(x.price)}<br><span class="pill p-${x.paid?"received":"committed"}">${x.paid?"paid":"unpaid"}</span></td><td class="n"><a class="btn alt sm" target="_blank" rel="noopener noreferrer" href="${gcal(x)}">+ Google Cal</a> <button class="btn alt sm" data-sedit="${x.id}">Edit</button> <button class="btn alt sm" data-sdel="${x.id}">Delete</button></td></tr>`).join("")||'<tr><td colspan="6" class="empty">No sessions yet. Add one to see expected income here and in Business.</td></tr>';
+ const bk=okUrl(cf.book);const bl=$("bookLink");bl.style.display=bk?"":"none";if(bk)bl.href=bk;
+ const em=okUrl(cf.embed,"calendar.google.com");$("calBox").innerHTML=em?`<iframe class="cal" src="${esc(em)}" title="Google Calendar"></iframe>`:'<div class="empty">Paste your Google Calendar embed link in Settings to show your calendar here. In Google Calendar: Settings for your calendar → Integrate calendar → Embed code (copy the src link). Make the calendar visible to the people who will view this page.</div>';
+ const groups=[...new Set(CHK0.map(c=>c[0]))];
+ $("chk").innerHTML=groups.map(g=>`<div class="grp">${g}</div>`+CHK0.map((c,i)=>[c,i]).filter(([c])=>c[0]===g).map(([c,i])=>`<label class="chk ${S.checks[i]?"done":""}"><input type="checkbox" data-ck="${i}" ${S.checks[i]?"checked":""}><span>${esc(c[1])}</span></label>`).join("")).join("");
+ // customers
+ const L=S.leads,booked=L.filter(l=>l.stage==="booked"||l.stage==="paid").length,paid=L.filter(l=>l.stage==="paid").length;
+ $("cL").textContent=L.length;$("cB").textContent=booked;$("cP").textContent=paid;$("cC").textContent=L.length?Math.round(paid/L.length*100)+"%":"n/a";
+ const mxL=Math.max(1,L.length);$("funnel").innerHTML=[["Enquiry",L.length,"var(--rose)"],["Consult booked",booked,"var(--tan)"],["Paid",paid,"var(--green)"]].map(([n,v,c])=>`<div class="row"><div class="top"><span>${n}</span><span>${v}</span></div><div class="bar"><i style="width:${v/mxL*100}%;background:${c}"></i></div></div>`).join("");
+ const chs={};L.forEach(l=>{const k=l.channel||"Not set";(chs[k]=chs[k]||{n:0,b:0,p:0,rev:0});chs[k].n++;if(l.stage==="booked"||l.stage==="paid")chs[k].b++;if(l.stage==="paid")chs[k].p++});
+ S.income.filter(i=>i.status==="received").forEach(i=>{const k=chan(i);(chs[k]=chs[k]||{n:0,b:0,p:0,rev:0});chs[k].rev+=i.amount});
+ const cr=Object.entries(chs).sort((a,b)=>b[1].rev-a[1].rev||b[1].n-a[1].n);
+ $("chRows").innerHTML=cr.map(([k,v])=>`<tr><td>${esc(k)}</td><td class="n">${v.n}</td><td class="n">${v.b}</td><td class="n">${v.p}</td><td class="n">${v.n?Math.round(v.p/v.n*100)+"%":"-"}</td><td class="n">${fmt(v.rev)}</td><td class="n">${v.p?fmt(v.rev/v.p):"-"}</td></tr>`).join("")||'<tr><td colspan="7" class="empty">No data.</td></tr>';
+ const ci=[];const best=cr.filter(([k,v])=>v.n>=1).sort((a,b)=>b[1].rev-a[1].rev)[0];
+ if(best&&best[1].rev)ci.push(["Most revenue: "+best[0],fmt(best[1].rev)+" received from this channel."]);
+ const ns=L.filter(l=>!l.channel).length;if(ns)ci.push(["Tag the channel on "+ns+" enquiries","Without channels you cannot tell which platform brings customers."]);
+ const open=L.filter(l=>l.stage==="enquiry").length;if(open)ci.push([open+" open enquiries","Follow up and offer a booking link."]);
+ if(L.length<10)ci.push(["Small sample","Conversion rates from fewer than 10 enquiries are not reliable yet."]);
+ $("cIns").innerHTML=ci.map(i=>`<div class="ins"><span>💡</span><div><b>${esc(i[0])}</b><span class="note">${esc(i[1])}</span></div></div>`).join("");
+ $("leadRows").innerHTML=[...L].sort((a,b)=>b.date.localeCompare(a.date)).map(l=>`<tr><td>${fdate(l.date)}</td><td>${esc(l.client)}</td><td>${esc(l.channel||"Not set")}</td><td>${esc(l.interest)}</td><td><span class="pill p-${l.stage==="paid"?"received":l.stage==="lost"?"projected":"committed"}">${STG[l.stage]}</span></td><td class="n"><button class="btn alt sm" data-ledit="${l.id}">Edit</button> <button class="btn alt sm" data-ldel="${l.id}">Delete</button></td></tr>`).join("")||'<tr><td colspan="6" class="empty">No enquiries yet.</td></tr>';
+ // courses
+ $("courseCards").innerHTML=S.courses.map(c=>{const r=costRow(c);return `<div class="course"><h3>${esc(c.name)}</h3><div class="price">${fmt(c.price)}</div><div class="note">${esc(c.note)}</div><div class="note" style="margin-top:6px">${r.tot} h of work · about ${fmt(r.nph)}/h net</div></div>`}).join("");
+ $("struct").innerHTML=STRUCT.map(r=>`<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join("");
+ $("diff").innerHTML=DIFF.map(t=>`<div class="ins"><span>✨</span><div>${esc(t)}</div></div>`).join("")+'<div class="warn">Only keep claims that are true of how you really work. Edit the DIFF list in the code.</div>';
+ $("dont").innerHTML=DONT.map(t=>`<div class="ins"><span>🚫</span><div>${esc(t)}</div></div>`).join("");
+ // cost
+ $("costRows").innerHTML=S.courses.map((c,i)=>{const r=costRow(c);const inp=(k,v)=>`<input class="cell" type="number" min="0" step="0.25" value="${v}" data-cc="${i}:${k}">`;return `<tr><td>${esc(c.name)}</td><td class="n">${inp("price",c.price)}</td><td class="n">${inp("live",c.live)}</td><td class="n">${inp("prep",c.prep)}</td><td class="n">${inp("review",c.review)}</td><td class="n">${r.tot}</td><td class="n">${fmt(r.fee)}</td><td class="n">${fmt(r.tool)}</td><td class="n">${fmt(r.net)}</td><td class="n"><b>${fmt(r.nph)}</b></td><td class="n ${r.vs>=0?"ok":"bad"}">${r.vs>=0?"+":""}${fmt(r.vs)}</td></tr>`}).join("");
+ const ins=[];const below=S.courses.filter(c=>costRow(c).vs<0);
+ ins.push(below.length?["Below your target rate: "+below.map(c=>c.name).join("; "),"These earn less than "+fmt(cf.target)+"/h net after prep, review and costs. Raise the price, cut hours, or sell it as an add-on."]:["All offers meet your target rate","With the hours entered."]);
+ const m=S.courses.find(c=>c.id==="monthly"),h=S.courses.find(c=>c.id==="consult");if(m&&h&&m.live)ins.push(["Monthly plan vs hourly",`If a client uses all ${m.live} h, they pay about ${fmt(m.price/m.live)}/h vs ${fmt(h.price)}/h hourly. The plan only wins for them if they value quick questions.`]);
+ const done=S.sessions.filter(x=>x.status!=="cancelled"&&x.date<=T),dh=done.reduce((a,x)=>a+x.hours,0),dr=done.reduce((a,x)=>a+x.price,0);
+ if(dh)ins.push(["Actual from logged sessions",`${fmt(dr)} over ${dh} live hours = ${fmt(dr/dh)} per live hour (before prep and review time).`]);
+ $("costIns").innerHTML="<h2>Insights</h2>"+ins.map(i=>`<div class="ins"><span>💡</span><div><b>${esc(i[0])}</b><span class="note">${esc(i[1])}</span></div></div>`).join("");
+ // templates
+ const nm=$("rName").value.trim();
+ $("tpls").innerHTML=S.templates.map(t=>`<div class="tpl"><b>${esc(t.title)}</b><div class="body">${esc(fillTok(t.body,nm))}</div><button class="btn sm" data-copy="${t.id}">Copy</button> <button class="btn alt sm" data-tedit="${t.id}">Edit</button> <button class="btn alt sm" data-tdel="${t.id}">Delete</button></div>`).join("");
+ // goal card on Business
+ const mm=T.slice(0,7),got=S.income.filter(i=>i.date&&i.date.slice(0,7)===mm&&i.status==="received").reduce((a,i)=>a+i.amount,0),com=S.income.filter(i=>i.date&&i.date.slice(0,7)===mm&&i.status!=="received").reduce((a,i)=>a+i.amount,0);
+ const gp=cf.goal?Math.min(100,got/cf.goal*100):0,gc=cf.goal?Math.min(100-gp,com/cf.goal*100):0;
+ $("goalBox").innerHTML=`<h2>Monthly goal</h2><div class="big" style="font-size:26px">${fmt(got)} <span class="note">of ${fmt(cf.goal)}</span></div><div class="bar" style="height:14px"><i style="width:${gp}%;background:var(--green)"></i><i style="left:${gp}%;width:${gc}%;background:var(--tan);opacity:.6"></i></div><div class="note" style="margin-top:6px">Received ${fmt(got)} · dated this month and not yet received ${fmt(com)}. Goal is set in Settings.</div>`;
+ const cs=$("sesCourse");if(cs&&!cs.dataset.f){cs.innerHTML=S.courses.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join("");cs.dataset.f=1}
+}
+// recommender
+function recommend(){const g=$("rGoal").value,need=$("rNeed").value,draft=$("rDraft").checked,nm=$("rName").value.trim()||"น้อง";const P=id=>(S.courses.find(c=>c.id===id)||{price:0}).price.toLocaleString("en-US");
+ let r=[];
+ if(g==="uk")r=need==="ongoing"?[["monthly","Ongoing planning over several weeks fits the monthly plan."],["essay","Add essay review once drafts exist."]]:[["consult","Start with one hour to map the plan."]];
+ if(g==="uk"&&draft&&need!=="ongoing")r.push(["essay","They already have a draft to review."]);
+ if(g==="ocsc")r=[["consult","Check eligibility and steps with the official announcement together."],["checklist","One-page checklist to keep."]];
+ if(g==="ielts")r=need==="ongoing"?[["ielts","4-week plan with weekly deliverables."]]:[["consult","One hour to plan IELTS prep, then decide on the 4-week course."]];
+ if(g==="essay")r=draft?[["essay","Review the existing draft."]]:[["consult","No draft yet: plan the structure first (client writes it themselves)."]];
+ if(g==="cv")r=[["cv","One-page CV review."]];
+ if(g==="unsure")r=[["consult","One hour to find out what they need."]];
+ const names=r.map(x=>cname(x[0])+" ("+P(x[0])+" บาท)").join(" / ");
+ const msg=`สวัสดีค่ะ ${nm} จากที่คุยกัน พี่แนะนำ: ${names} ${S.cfg.book?"จองเวลาได้ที่ "+S.cfg.book:"สนใจบอกพี่ได้เลยค่ะ"} พี่ไม่รับประกันผลนะคะ`;
+ $("rOut").innerHTML=r.map(x=>`<div class="ins"><span>✅</span><div><b>${esc(cname(x[0]))} · ${fmt((S.courses.find(c=>c.id===x[0])||{}).price||0)}</b><span class="note">${esc(x[1])}</span></div></div>`).join("")+`<div class="tpl"><div class="note">Suggested reply</div><div class="body">${esc(msg)}</div><button class="btn sm" data-copytext="1">Copy</button></div>`;$("rOut").dataset.msg=msg}
+function copy(t){if(navigator.clipboard)navigator.clipboard.writeText(t).catch(()=>{});else{const a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();document.execCommand("copy");a.remove()}}
+let ed2=null;
+document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)return;const d=t.dataset;
+ if(d.add==="session"){ed2=null;const f=$("fSes");f.reset();$("tSes").textContent="Add session";f.elements.date.value=TODAY;const c=S.courses[0];f.elements.price.value=c.price;f.elements.hours.value=c.live||1;$("dlgSes").showModal()}
+ else if(d.add==="lead"){ed2=null;const f=$("fLead");f.reset();$("tLead").textContent="Add enquiry";f.elements.date.value=TODAY;$("dlgLead").showModal()}
+ else if(d.add==="tpl"){ed2=null;$("fTpl").reset();$("tTpl").textContent="New template";$("dlgTpl").showModal()}
+ else if(d.sedit){const x=S.sessions.find(z=>z.id===d.sedit);ed2=x.id;const f=$("fSes");$("tSes").textContent="Edit session";for(const k of["client","course","date","time","hours","price","channel","status"])f.elements[k].value=x[k]??"";f.elements.paid.checked=!!x.paid;$("dlgSes").showModal()}
+ else if(d.sdel){if(confirm("Delete this session and its linked income entry?")){S.sessions=S.sessions.filter(z=>z.id!==d.sdel);S.income=S.income.filter(i=>i.sid!==d.sdel);save();render()}}
+ else if(d.ledit){const x=S.leads.find(z=>z.id===d.ledit);ed2=x.id;const f=$("fLead");$("tLead").textContent="Edit enquiry";for(const k of["client","channel","date","stage","interest","note"])f.elements[k].value=x[k]??"";$("dlgLead").showModal()}
+ else if(d.ldel){if(confirm("Delete this enquiry?")){S.leads=S.leads.filter(z=>z.id!==d.ldel);save();render()}}
+ else if(d.tedit){const x=S.templates.find(z=>z.id===d.tedit);ed2=x.id;const f=$("fTpl");$("tTpl").textContent="Edit template";f.elements.title.value=x.title;f.elements.body.value=x.body;$("dlgTpl").showModal()}
+ else if(d.tdel){if(confirm("Delete this template?")){S.templates=S.templates.filter(z=>z.id!==d.tdel);save();render()}}
+ else if(d.copy){const x=S.templates.find(z=>z.id===d.copy);copy(fillTok(x.body,$("rName").value.trim()));t.textContent="Copied";setTimeout(()=>t.textContent="Copy",1200)}
+ else if(d.copytext){copy($("rOut").dataset.msg||"");t.textContent="Copied";setTimeout(()=>t.textContent="Copy",1200)}
+});
+document.addEventListener("change",e=>{const t=e.target;
+ if(t.dataset.ck!==undefined){S.checks[t.dataset.ck]=t.checked;save();render()}
+ else if(t.dataset.cc){const[i,k]=t.dataset.cc.split(":");S.courses[+i][k]=Math.max(0,+t.value||0);save();render()}});
+const cfgMap={sGoal:"goal",sTarget:"target",sTool:"tool",sOther:"other",sWork:"work",sFee:"fee"};
+Object.entries(cfgMap).forEach(([id,k])=>$(id).onchange=e=>{S.cfg[k]=Math.max(0,+e.target.value||0);save();render()});
+$("sBook").onchange=e=>{const u=e.target.value.trim();if(u&&!okUrl(u)){alert("Use an https:// link.");return}S.cfg.book=u;save();render()};
+$("sEmbed").onchange=e=>{const u=e.target.value.trim();if(u&&!okUrl(u,"calendar.google.com")){alert("Use an https://calendar.google.com/... embed link.");return}S.cfg.embed=u;save();render()};
+$("chkReset").onclick=()=>{S.checks={};save();render()};
+$("rGo").onclick=recommend;$("rName").oninput=()=>render2();
+$("sesCourse").onchange=e=>{const c=S.courses.find(x=>x.id===e.target.value);if(c){$("fSes").elements.price.value=c.price;$("fSes").elements.hours.value=c.live||1}};
+$("fSes").addEventListener("submit",ev=>{if(ev.submitter?.value!=="ok")return;const f=ev.target.elements;const o={id:ed2||uid(),client:f.client.value.trim(),course:f.course.value,date:f.date.value,time:f.time.value,hours:Math.max(0,+f.hours.value||0),price:Math.max(0,+f.price.value||0),channel:f.channel.value.trim(),status:f.status.value,paid:f.paid.checked};
+ const i=S.sessions.findIndex(x=>x.id===o.id);i>=0?S.sessions[i]=o:S.sessions.push(o);syncSession(o);save();render()});
+$("fLead").addEventListener("submit",ev=>{if(ev.submitter?.value!=="ok")return;const f=ev.target.elements;const o={id:ed2||uid(),client:f.client.value.trim(),channel:f.channel.value.trim(),date:f.date.value,stage:f.stage.value,interest:f.interest.value.trim(),note:f.note.value.trim()};
+ const i=S.leads.findIndex(x=>x.id===o.id);i>=0?S.leads[i]=o:S.leads.push(o);save();render()});
+$("fTpl").addEventListener("submit",ev=>{if(ev.submitter?.value!=="ok")return;const f=ev.target.elements;const o={id:ed2||uid(),title:f.title.value.trim(),body:f.body.value};
+ const i=S.templates.findIndex(x=>x.id===o.id);i>=0?S.templates[i]=o:S.templates.push(o);save();render()});
+$("xlsx3").onclick=()=>report();
+
+// ===== v4: reviews, pricing plan, quotations, operations, conflicts =====
+const COMP0=[["เตรียมก่อนคุย",1],["คุย Personal consult 1 ครั้ง",1],["สรุปหน้าเดียว (เทมเพลต)",1],["สรุปละเอียด 3–4 หน้า",3],["โครง/คอนเซ็ปต์เรื่องเล่า SOP",2],["SOP ฉบับเต็ม 1 มหาวิทยาลัย",3],["SOP มหาวิทยาลัยเพิ่ม (ต่อ 1 แห่ง)",2],["รีวิว Essay ทุน (ต่อ 1 ชิ้น)",1.5],["ซ้อมสัมภาษณ์ 1 รอบ",1.5],["เช็กอิน/ตอบแชตตามรอบ (ต่อ 1 ครั้ง)",0.5],["เวลาสำรองตอบแชต (ต่อ 1 ลูกค้า)",1]];
+const TIER0=[{n:"Starter",p:2000,q:[1,1,1,0,0,0,0,0,0,0,1]},{n:"Plus",p:3500,q:[1,1,1,1,0,0,0,0,0,0,1]},{n:"Application",p:5500,q:[1,1,1,1,1,1,0,0,0,0,1]},{n:"Season",p:7500,q:[1,1,1,1,1,1,2,0,0,4,1]},{n:"Premium",p:10000,q:[1,1,1,1,1,1,2,2,2,8,2]}];
+const PLAN0=[[3,3,3],[1,2,2],[0,1,2],[0,0,1],[0,0,0]];
+const OPS0=[["Clients","Intake form: goal, deadline, what they already have, consent to be contacted"],["Clients","Review form (Google Form) with a clear permission choice for publishing and for news"],["Clients","Keep phone/email only in a private sheet. Never in this dashboard or a public repo"],["Clients","Reminder message before each session (template exists in Assistant)"],["Policies","Written scope: what is included, what is not (no ghostwriting, no outcome guarantee)"],["Policies","Reschedule, cancellation and refund policy"],["Policies","Revision limit and delivery time stated on every quotation"],["Policies","Privacy note: what data you keep, how long, how to delete it (check Thailand PDPA requirements)"],["Money","Decide how you receive payment and keep a record of every payment"],["Money","Receipt / invoice routine for each paid client"],["Money","Track real hours per task for 3-5 jobs to replace the starter hour estimates"],["Money","Tax and side-income rules, employer rules: check with an accountant or the authority"],["Delivery","Deliverable templates: one-page summary, detailed summary, session notes"],["Delivery","Pre-session checklist (Schedule tab) used every time"],["Delivery","Facts check: re-verify scholarship deadlines and criteria on official sites before sending"],["Systems","Booking link live and tested from a clean browser"],["Systems","Weekly export backup (Settings) and a private copy of the repo"],["Systems","Calendar conflict check before confirming a booking"],["Marketing","Tag the channel on every enquiry so channel results are real"],["Marketing","Collect permitted reviews and show only what the client allowed"]];
+const REV0=[
+ {id:"r1",name:"Noi",date:"2026-11-04",rating:5,display:"anon",recommend:true,news:true,text:"ໃຫ້ຄຳແນະນຳດີຫຼາຍ",gloss:"Gave very good advice. (unofficial translation, please verify)",before:"SOP",after:"ໄດ້ຮູ້ຄວາມຮູ້ຫຼາຍ ເຂົ້າໃຈວິທີການແນວທາງການ SOP",best:"ທຸກສວນເລີຍໃຫ້ຄຳແນະນຳດີຫຼາຍ",improve:"ດີທຸູກຢ່າງ"},
+ {id:"r2",name:"เพียว",date:"2026-11-09",rating:5,display:"first",recommend:true,news:true,text:"รู้สึกได้คำแนะนำที่เป็นประโยชน์สำหรับการสมัครทุน และเตรียมตัวสอบ IELTS มากครับ",gloss:"",before:"เรื่องการเตรียม IELTS และแนวทางการเตรียมเขียน Essay",after:"ได้เรียนรู้ว่าเราควรวางแผนการเรียน IELTS แต่ละสกิลยังไง และกระบวนการสมัครและเตรียมเอกสารในการสมัครทุน",best:"ช่วงที่พี่แนะนำการเตรียมตัว IELTS และเล่าถึงชีวิตที่ได้ไปเที่ยวยุโรป",improve:"ไม่มีเลยครับ ชอบการคอลมากกว่าปรึกษาผ่านแชท"}];
+const QTERMS0=["ราคานี้ใช้ได้ถึงวันที่ระบุในใบเสนอราคา","ขอบเขตงานเป็นไปตามรายการที่ระบุเท่านั้น","แก้ไขได้สูงสุด 3 รอบ","ส่งมอบภายใน 2 วันหลังได้รับข้อมูลครบ","รายละเอียดการชำระเงินแจ้งหลังยืนยันการสั่งซื้อ","นโยบายเลื่อน/ยกเลิก: [[ระบุ]]","ไม่รับประกันผลการสมัครทุน การรับเข้าเรียน หรือคะแนนสอบ"];
+S.reviews=S.reviews||REV0;S.blocks=S.blocks||[];S.comps=S.comps||COMP0;S.tiers=S.tiers||TIER0;S.plan=S.plan||PLAN0;S.quotes=S.quotes||[];S.ops=S.ops||{};
+S.cfg=Object.assign({formUrl:"",buffer:15,maxDay:4,closeRate:30,bookRate:20,qTerms:QTERMS0},S.cfg);
+if(!S.templates.find(t=>t.id==="t8"))S.templates.push({id:"t8",title:"ขอรีวิว",body:"ขอบคุณที่คุยกันค่ะ {name} ถ้าสะดวก รบกวนรีวิวสั้นๆ ประมาณ 1 นาทีได้ที่ {review} นะคะ จะแสดงเฉพาะที่น้องอนุญาตเท่านั้นค่ะ"});
+save();
+const th=["มกราคม","กุมภาพันธ์","มีนาคม","เมษายน","พฤษภาคม","มิถุนายน","กรกฎาคม","สิงหาคม","กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม"];
+const tdate=d=>{if(!d)return"";const x=new Date(d+"T00:00");return x.getDate()+" "+th[x.getMonth()]+" "+(x.getFullYear()+543)+" ("+x.toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"})+")"};
+const dispName=r=>r.display==="none"?"":r.display==="anon"?"ผู้ใช้บริการ":r.display==="first"?String(r.name).trim().split(/\s+/)[0]:r.name;
+const hl=t=>esc(t).replace(/\[\[(.*?)\]\]/g,'<mark>[$1]</mark>');
+const T=TODAY;
+function conflicts(){
+ const ev=[];
+ S.sessions.filter(x=>x.status!=="cancelled").forEach(x=>{const a=new Date(x.date+"T"+(x.time||"19:00")).getTime();ev.push({k:"s",id:x.id,a,b:a+(x.hours||1)*3600000,d:x.date,t:x.time||"",what:x.client+" · "+cname(x.course),hrs:x.hours||0})});
+ S.blocks.forEach(b=>{const e=b.end||b.date;const a=new Date(b.date+"T"+(b.from||"00:00")).getTime(),z=new Date(e+"T"+(b.to||"23:59")).getTime();ev.push({k:"b",id:b.id,a,b:z,d:b.date,t:b.from?b.from+"-"+(b.to||""):"All day",what:b.title})});
+ ev.sort((x,y)=>x.a-y.a);const msgs={},add=(id,m)=>{(msgs[id]=msgs[id]||[]).push(m)},buf=(+S.cfg.buffer||0)*60000;
+ for(let i=0;i<ev.length;i++)for(let j=i+1;j<ev.length;j++){const x=ev[i],y=ev[j];if(y.a>=x.b+buf)break;if(x.k==="b"&&y.k==="b")continue;
+  if(y.a<x.b){add(x.id,"Overlaps "+y.what);add(y.id,"Overlaps "+x.what)}else{add(x.id,"Less than "+S.cfg.buffer+" min before "+y.what);add(y.id,"Less than "+S.cfg.buffer+" min after "+x.what)}}
+ const perDay={};ev.filter(e=>e.k==="s").forEach(e=>perDay[e.d]=(perDay[e.d]||0)+e.hrs);
+ ev.filter(e=>e.k==="s"&&perDay[e.d]>S.cfg.maxDay).forEach(e=>add(e.id,perDay[e.d]+" h live on "+fdate(e.d)+" (max "+S.cfg.maxDay+")"));
+ return{ev,msgs}}
+function render3(){
+ const cf=S.cfg,set=(id,v)=>{const e=$(id);if(e&&document.activeElement!==e)e.value=v};
+ set("sForm",cf.formUrl);set("sBuf",cf.buffer);set("sMaxDay",cf.maxDay);set("pClose",cf.closeRate);set("pBook",cf.bookRate);
+ // conflicts
+ const {ev,msgs}=conflicts();const bad=Object.keys(msgs).length;
+ const upEv=ev.filter(e=>e.d>=T||(e.k==="b"&&(S.blocks.find(b=>b.id===e.id).end||e.d)>=T));
+ const allMsgs=[...new Set(Object.entries(msgs).filter(([id])=>upEv.some(e=>e.id===id)).flatMap(([id,m])=>m.map(t=>(ev.find(e=>e.id===id)||{}).what+": "+t)))];
+ $("conf").innerHTML=allMsgs.length?`<div class="warn" style="margin-bottom:14px"><b>${allMsgs.length} schedule warning${allMsgs.length>1?"s":""}</b><br>${allMsgs.slice(0,8).map(esc).join("<br>")}</div>`:'<div class="warn" style="margin-bottom:14px;background:var(--green-l)">No schedule conflicts found in upcoming items.</div>';
+ $("calRows").innerHTML=ev.filter(e=>upEv.includes(e)).map(e=>{const m=msgs[e.id];return `<tr><td>${fdate(e.d)}</td><td>${esc(e.t)}</td><td><span class="pill ${e.k==="s"?"p-received":"p-projected"}">${e.k==="s"?"Session":"Blocked"}</span></td><td>${esc(e.what)}</td><td>${m?`<span class="bad">${esc(m[0])}</span>`:'<span class="ok">OK</span>'}</td><td class="n">${e.k==="b"?`<button class="btn alt sm" data-bdel="${e.id}">Delete</button>`:""}</td></tr>`}).join("")||'<tr><td colspan="6" class="empty">Nothing scheduled. Add sessions or block time (trips, exams, travel).</td></tr>';
+ // reviews
+ const R=S.reviews,n=R.length,avg=n?R.reduce((a,r)=>a+r.rating,0)/n:0;
+ $("rvN").textContent=n;$("rvA").textContent=n?avg.toFixed(1)+" ★":"n/a";$("rvR").textContent=n?Math.round(R.filter(r=>r.recommend).length/n*100)+"%":"n/a";$("rvP").textContent=R.filter(r=>r.display!=="none").length+" / "+n;
+ const fl=okUrl(cf.formUrl,"");const fa=$("formLink");fa.style.display=fl?"":"none";if(fl)fa.href=fl;
+ $("revList").innerHTML=R.map(r=>`<div class="tpl"><div class="tools" style="justify-content:space-between"><b>${"★".repeat(r.rating)}${"☆".repeat(5-r.rating)} · ${esc(r.name)}</b><span class="note">${fdate(r.date)}</span></div><div class="body">${esc(r.text)}${r.gloss?`<br><span class="note">${esc(r.gloss)}</span>`:""}</div><div class="note">Shown publicly as: ${r.display==="none"?"<b>not allowed</b>":esc(dispName(r))}${r.news?" · agreed to news":""}${r.recommend?" · would recommend":""}</div><div style="margin-top:8px">${r.display!=="none"?`<button class="btn sm" data-rcopy="${r.id}">Copy testimonial</button> `:""}<button class="btn alt sm" data-redit="${r.id}">Edit</button> <button class="btn alt sm" data-rdel="${r.id}">Delete</button></div></div>`).join("")||'<div class="empty">No reviews yet.</div>';
+ const ri=[];if(n&&n<10)ri.push(["Only "+n+" review"+(n>1?"s":""),"Too few to quote an average publicly. Aim for 10 or more."]);
+ const best=R.filter(r=>r.best).slice(0,3);best.forEach(r=>ri.push(["Most useful ("+(dispName(r)||"private")+")",r.best]));
+ const imp=R.filter(r=>r.improve&&!/^(ไม่มี|ดี)/.test(r.improve.trim()));imp.forEach(r=>ri.push(["To improve",r.improve]));
+ if(R.some(r=>/คอล|call/i.test(r.improve+r.best)))ri.push(["Calls beat chat","A client said they preferred a real call to chat. Worth featuring in how your course differs."]);
+ ri.push(["Contact details","Phone and email stay in your private Google Sheet. This page stores none."]);
+ $("revIns").innerHTML=ri.map(i=>`<div class="ins"><span>💬</span><div><b>${esc(i[0])}</b><span class="note">${esc(i[1])}</span></div></div>`).join("");
+ // plan
+ const tiers=S.tiers,C=S.comps,thead=$("tierHead");
+ thead.innerHTML="<tr><th>Item</th><th class='n'>Hours / unit</th>"+tiers.map(t=>`<th class="n">${esc(t.n)}</th>`).join("")+"</tr>";
+ const th_=tiers.map(t=>t.q.reduce((a,q,i)=>a+q*C[i][1],0)),net=tiers.map(t=>t.p*(1-(+cf.fee||0)/100));
+ $("tierRows").innerHTML=C.map((c,i)=>`<tr><td>${esc(c[0])}</td><td class="n"><input class="cell" type="number" min="0" step="0.25" value="${c[1]}" data-pcomp="${i}"></td>${tiers.map((t,j)=>`<td class="n"><input class="cell" style="width:56px" type="number" min="0" step="1" value="${t.q[i]}" data-ptq="${j}:${i}"></td>`).join("")}</tr>`).join("")
+  +`<tr><td><b>Total hours</b></td><td></td>${th_.map(h=>`<td class="n"><b>${h}</b></td>`).join("")}</tr><tr><td><b>Price ฿</b></td><td></td>${tiers.map((t,j)=>`<td class="n"><input class="cell" type="number" min="0" step="100" value="${t.p}" data-ptp="${j}"></td>`).join("")}</tr><tr><td><b>Net per hour</b></td><td></td>${tiers.map((t,j)=>{const v=th_[j]?net[j]/th_[j]:0;return `<td class="n"><b>${fmt(v)}</b></td>`}).join("")}</tr><tr><td>vs target ${fmt(cf.target)}/h</td><td></td>${tiers.map((t,j)=>{const v=(th_[j]?net[j]/th_[j]:0)-cf.target;return `<td class="n ${v>=0?"ok":"bad"}">${v>=0?"+":""}${fmt(v)}</td>`}).join("")}</tr><tr><td>Lowest price that meets target</td><td></td>${th_.map(h=>`<td class="n">${fmt(h*cf.target/(1-(+cf.fee||0)/100))}</td>`).join("")}</tr><tr><td>In your 2,000 to 10,000 range?</td><td></td>${tiers.map(t=>`<td class="n">${t.p>=2000&&t.p<=10000?"Yes":"No"}</td>`).join("")}</tr>`;
+ $("tierNote").textContent="Starter assumes 4 h of work. Your current personal consult takes about 10 h for 2,000 ฿ (200 ฿/h), so the Starter only reaches your target if templates really cut the time.";
+ $("planHead").innerHTML="<tr><th>Tier</th><th class='n'>Month 1</th><th class='n'>Month 2</th><th class='n'>Month 3</th><th class='n'>Price</th><th class='n'>Revenue</th><th class='n'>Hours</th></tr>";
+ const mrev=[0,0,0],mh=[0,0,0];
+ $("planRows").innerHTML=tiers.map((t,j)=>{const r=S.plan[j]||[0,0,0];r.forEach((c,m)=>{mrev[m]+=c*t.p;mh[m]+=c*th_[j]});const tc=r.reduce((a,b)=>a+b,0);return `<tr><td>${esc(t.n)}</td>${r.map((c,m)=>`<td class="n"><input class="cell" style="width:56px" type="number" min="0" value="${c}" data-ppl="${j}:${m}"></td>`).join("")}<td class="n">${fmt(t.p)}</td><td class="n">${fmt(tc*t.p)}</td><td class="n">${tc*th_[j]}</td></tr>`}).join("")
+  +`<tr><td><b>Revenue</b></td>${mrev.map(v=>`<td class="n"><b>${fmt(v)}</b></td>`).join("")}<td></td><td class="n"><b>${fmt(mrev.reduce((a,b)=>a+b,0))}</b></td><td></td></tr><tr><td><b>Hours needed</b></td>${mh.map(v=>`<td class="n"><b>${v}</b></td>`).join("")}<td></td><td></td><td class="n"><b>${mh.reduce((a,b)=>a+b,0)}</b></td></tr><tr><td>Capacity (${cf.work} h/month)</td>${mh.map(v=>`<td class="n ${v>cf.work?"bad":"ok"}">${v>cf.work?"Over":"OK"}</td>`).join("")}<td></td><td></td><td></td></tr>`;
+ const cust3=S.plan.reduce((a,r)=>a+(r[2]||0),0),cl=Math.max(1,cf.closeRate)/100,bk=Math.max(1,cf.bookRate)/100,booked=Math.ceil(cust3/cl),enq=Math.ceil(booked/bk);
+ $("funNeed").innerHTML=`<div class="ins"><span>🎯</span><div><b>${cust3} customers in month 3</b><span class="note">Needs about ${booked} booked chats and ${enq} enquiries a month at these rates.</span></div></div>`;
+ const L=S.leads,bkd=L.filter(l=>l.stage==="booked"||l.stage==="paid").length,pd=L.filter(l=>l.stage==="paid").length;
+ $("funAct").innerHTML=L.length?`<div class="ins"><span>📈</span><div><b>Enquiry to booked: ${Math.round(bkd/L.length*100)}% · Booked to paid: ${bkd?Math.round(pd/bkd*100):0}%</b><span class="note">From ${L.length} logged enquiries. Too few to rely on; compare with the assumptions on the left.</span></div></div>`:'<div class="empty">No enquiries logged yet.</div>';
+ // quotes
+ $("qRows").innerHTML=[...S.quotes].sort((a,b)=>b.no.localeCompare(a.no)).map(q=>`<tr><td>${esc(q.no)}</td><td>${fdate(q.date)}</td><td>${esc(q.client)}</td><td class="n">${fmt(q.total)}</td><td><select data-qst="${q.id}" style="width:auto">${["draft","sent","accepted","declined"].map(x=>`<option ${q.status===x?"selected":""}>${x}</option>`).join("")}</select></td><td class="n"><button class="btn alt sm" data-qload="${q.id}">Open</button> <button class="btn alt sm" data-qdel="${q.id}">Delete</button></td></tr>`).join("")||'<tr><td colspan="6" class="empty">No saved quotations yet.</td></tr>';
+ if(!$("qAdd").dataset.f){$("qAdd").innerHTML='<option value="">+ Add from offers...</option>'+S.courses.map(c=>`<option value="c:${c.id}">${esc(c.name)} · ${fmt(c.price)}</option>`).join("")+S.tiers.map((t,j)=>`<option value="t:${j}">Package ${esc(t.n)} · ${fmt(t.p)}</option>`).join("");$("qAdd").dataset.f=1}
+ qRender();
+ // ops
+ const og=[...new Set(OPS0.map(o=>o[0]))],done=OPS0.filter((o,i)=>S.ops[i]).length;
+ $("opsList").innerHTML=`<div class="note" style="margin-bottom:6px"><b>${done} of ${OPS0.length}</b> set up</div>`+og.map(g=>`<div class="grp">${g}</div>`+OPS0.map((o,i)=>[o,i]).filter(([o])=>o[0]===g).map(([o,i])=>`<label class="chk ${S.ops[i]?"done":""}"><input type="checkbox" data-ops="${i}" ${S.ops[i]?"checked":""}><span>${esc(o[1])}</span></label>`).join("")).join("");
+}
+// ---- quotation draft ----
+let Q={client:"",valid:"",items:[],disc:0,note:"",terms:null};
+function qInit(){const d=new Date(Date.now()+7*864e5);Q={client:"",valid:iso(d),items:[],disc:0,note:"",terms:S.cfg.qTerms.slice(),id:null,no:null}}
+qInit();
+const qTotal=()=>Math.max(0,Q.items.reduce((a,i)=>a+i.q*i.p,0)-Q.disc);
+function qNo(){const ym=T.slice(0,4)+T.slice(5,7);const n=S.quotes.filter(q=>q.no.startsWith("QT-"+ym)).length+1;return "QT-"+ym+"-"+String(n).padStart(3,"0")}
+function qRender(){
+ if(document.activeElement!==$("qClient"))$("qClient").value=Q.client;if(document.activeElement!==$("qValid"))$("qValid").value=Q.valid;
+ if(document.activeElement!==$("qDisc"))$("qDisc").value=Q.disc;if(document.activeElement!==$("qNote"))$("qNote").value=Q.note;if(document.activeElement!==$("qTerms"))$("qTerms").value=Q.terms.join("\n");
+ $("qItems").innerHTML=Q.items.map((it,i)=>`<div class="two" style="grid-template-columns:2fr .6fr 1fr auto;margin-bottom:6px"><input data-qi="${i}:d" value="${esc(it.d)}" maxlength="160"><input data-qi="${i}:q" type="number" min="1" value="${it.q}"><input data-qi="${i}:p" type="number" min="0" value="${it.p}"><button class="btn alt sm" data-qrm="${i}">x</button></div>`).join("")||'<div class="note">No items yet.</div>';
+ $("qTot").textContent=fmt(qTotal());
+ const sub=Q.items.reduce((a,i)=>a+i.q*i.p,0);const no=Q.no||"(assigned on save)";
+ $("qPrev").innerHTML=`<div class="qdoc"><div class="qhead"><div><div class="qbrand">SCHOLARGIRL BY STAMP</div><div class="qtitle">ใบเสนอราคา · Quotation</div></div><div class="qmeta">เลขที่ ${esc(no)}<br>วันที่ ${tdate(Q.date||T)}<br>ใช้ได้ถึง ${tdate(Q.valid)}</div></div><p style="margin:14px 0"><b>เสนอแก่:</b> ${esc(Q.client)||'<mark>[ชื่อลูกค้า]</mark>'}</p>
+ <table class="qt"><thead><tr><th>#</th><th>รายการ</th><th class="n">จำนวน</th><th class="n">ราคา/หน่วย</th><th class="n">รวม (บาท)</th></tr></thead><tbody>${Q.items.map((it,i)=>`<tr><td>${i+1}</td><td>${hl(it.d)}</td><td class="n">${it.q}</td><td class="n">${it.p.toLocaleString("en-US")}</td><td class="n">${(it.q*it.p).toLocaleString("en-US")}</td></tr>`).join("")||'<tr><td colspan="5">-</td></tr>'}</tbody><tfoot>${Q.disc?`<tr><td colspan="4" class="n">รวมก่อนส่วนลด</td><td class="n">${sub.toLocaleString("en-US")}</td></tr><tr><td colspan="4" class="n">ส่วนลด</td><td class="n">-${Q.disc.toLocaleString("en-US")}</td></tr>`:""}<tr><td colspan="4" class="n"><b>ยอดรวมสุทธิ</b></td><td class="n"><b>${qTotal().toLocaleString("en-US")}</b></td></tr></tfoot></table>${Q.note?`<p style="margin-top:12px">${hl(Q.note)}</p>`:""}
+ <div style="margin-top:14px"><b>เงื่อนไข</b><ol style="margin:6px 0 0 20px">${Q.terms.filter(Boolean).map(t=>`<li>${hl(t)}</li>`).join("")}</ol></div><p class="note" style="margin-top:14px">ใบเสนอราคานี้เป็นข้อเสนอบริการให้คำปรึกษา ไม่ใช่ใบกำกับภาษี</p></div>`;
+}
+function qText(){const L=[`ใบเสนอราคา · Quotation (${Q.no||"draft"})`,"Scholargirl by Stamp","เสนอแก่: "+(Q.client||"[ชื่อลูกค้า]"),"วันที่: "+tdate(Q.date||T),"ใช้ได้ถึง: "+tdate(Q.valid),""];Q.items.forEach((i,k)=>L.push((k+1)+". "+i.d+" x"+i.q+" = "+(i.q*i.p).toLocaleString("en-US")+" บาท"));if(Q.disc)L.push("ส่วนลด -"+Q.disc.toLocaleString("en-US")+" บาท");L.push("ยอดรวมสุทธิ: "+qTotal().toLocaleString("en-US")+" บาท","");if(Q.note)L.push(Q.note,"");L.push("เงื่อนไข:");Q.terms.filter(Boolean).forEach((t,k)=>L.push((k+1)+". "+t));return L.join("\n")}
+function tierDesc(j){const t=S.tiers[j];return "Package "+t.n+": "+t.q.map((q,i)=>q&&i!==0&&i!==S.comps.length-1?(S.comps[i][0]+(q>1?" x"+q:"")):"").filter(Boolean).join(", ")}
+$("qAdd").onchange=e=>{const v=e.target.value;if(!v)return;const [k,id]=v.split(":");if(k==="c"){const c=S.courses.find(x=>x.id===id);Q.items.push({d:c.name,q:1,p:c.price})}else{const t=S.tiers[+id];Q.items.push({d:tierDesc(+id),q:1,p:t.p})}e.target.value="";qRender()};
+$("qCustom").onclick=()=>{Q.items.push({d:"",q:1,p:0});qRender()};
+$("qClient").oninput=e=>{Q.client=e.target.value;qRender()};$("qValid").onchange=e=>{Q.valid=e.target.value;qRender()};
+$("qDisc").oninput=e=>{Q.disc=Math.max(0,+e.target.value||0);qRender()};$("qNote").oninput=e=>{Q.note=e.target.value;qRender()};
+$("qTerms").oninput=e=>{Q.terms=e.target.value.split("\n");qRender()};
+document.addEventListener("input",e=>{const t=e.target;if(t.dataset.qi){const [i,k]=t.dataset.qi.split(":");const it=Q.items[+i];it[k]=k==="d"?t.value:Math.max(k==="q"?1:0,+t.value||0);$("qTot").textContent=fmt(qTotal());qRender2()}});
+function qRender2(){const a=document.activeElement,id=a&&a.dataset&&a.dataset.qi,pos=a&&a.selectionStart;qRender();if(id){const n=document.querySelector(`[data-qi="${id}"]`);if(n){n.focus();try{n.setSelectionRange(pos,pos)}catch(x){}}}}
+$("qSave").onclick=()=>{if(!Q.items.length){alert("Add at least one item.");return}const o={id:Q.id||uid(),no:Q.no||qNo(),date:Q.date||T,valid:Q.valid,client:Q.client||"(no name)",items:Q.items,disc:Q.disc,note:Q.note,terms:Q.terms,total:qTotal(),status:(S.quotes.find(x=>x.id===Q.id)||{}).status||"draft"};const i=S.quotes.findIndex(x=>x.id===o.id);i>=0?S.quotes[i]=o:S.quotes.push(o);Q.id=o.id;Q.no=o.no;Q.date=o.date;save();render()};
+$("qPrint").onclick=()=>{document.body.classList.add("printq");window.print();setTimeout(()=>document.body.classList.remove("printq"),500)};
+$("qCopy").onclick=()=>{copy(qText());$("qCopy").textContent="Copied";setTimeout(()=>$("qCopy").textContent="Copy as text",1200)};
+$("qDef").onclick=()=>{S.cfg.qTerms=Q.terms.filter(Boolean);save();$("qDef").textContent="Saved";setTimeout(()=>$("qDef").textContent="Save terms as default",1200)};
+// events
+document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)return;const d=t.dataset;
+ if(d.qrm){Q.items.splice(+d.qrm,1);qRender()}
+ else if(d.qload){const q=S.quotes.find(x=>x.id===d.qload);Q={client:q.client,valid:q.valid,items:q.items.map(i=>({...i})),disc:q.disc,note:q.note,terms:q.terms.slice(),id:q.id,no:q.no,date:q.date};render()}
+ else if(d.qdel){if(confirm("Delete this quotation?")){S.quotes=S.quotes.filter(x=>x.id!==d.qdel);save();render()}}
+ else if(d.add==="review"){ed2=null;const f=$("fRev");f.reset();$("tRev").textContent="Add review";f.elements.date.value=TODAY;$("dlgRev").showModal()}
+ else if(d.add==="block"){ed2=null;const f=$("fBlk");f.reset();f.elements.date.value=TODAY;$("dlgBlk").showModal()}
+ else if(d.redit){const r=S.reviews.find(x=>x.id===d.redit);ed2=r.id;const f=$("fRev");$("tRev").textContent="Edit review";for(const k of["name","date","rating","display","text","gloss","before","after","best","improve"])f.elements[k].value=r[k]??"";f.elements.recommend.checked=!!r.recommend;f.elements.news.checked=!!r.news;$("dlgRev").showModal()}
+ else if(d.rdel){if(confirm("Delete this review?")){S.reviews=S.reviews.filter(x=>x.id!==d.rdel);save();render()}}
+ else if(d.rcopy){const r=S.reviews.find(x=>x.id===d.rcopy);copy("“"+r.text+"”"+(r.gloss?"\n("+r.gloss+")":"")+"\n— "+dispName(r));t.textContent="Copied";setTimeout(()=>t.textContent="Copy testimonial",1200)}
+ else if(d.bdel){if(confirm("Delete this blocked time?")){S.blocks=S.blocks.filter(x=>x.id!==d.bdel);save();render()}}
+});
+document.addEventListener("change",e=>{const t=e.target,d=t.dataset;
+ if(d.qst){const q=S.quotes.find(x=>x.id===d.qst);const was=q.status;q.status=t.value;if(t.value==="accepted"&&was!=="accepted"&&confirm("Add "+fmt(q.total)+" to your income list as committed income (no date yet)?")){S.income.push({id:uid(),qid:q.id,client:q.client,channel:"",note:q.no,amount:q.total,date:"",status:"committed"})}save();render()}
+ else if(d.ops!==undefined){S.ops[d.ops]=t.checked;save();render()}
+ else if(d.pcomp!==undefined){S.comps[+d.pcomp][1]=Math.max(0,+t.value||0);save();render()}
+ else if(d.ptq){const[j,i]=d.ptq.split(":");S.tiers[+j].q[+i]=Math.max(0,+t.value||0);save();render()}
+ else if(d.ptp!==undefined){S.tiers[+d.ptp].p=Math.max(0,+t.value||0);save();render()}
+ else if(d.ppl){const[j,m]=d.ppl.split(":");(S.plan[+j]=S.plan[+j]||[0,0,0])[+m]=Math.max(0,+t.value||0);save();render()}});
+$("pClose").onchange=e=>{S.cfg.closeRate=Math.min(100,Math.max(1,+e.target.value||1));save();render()};$("pBook").onchange=e=>{S.cfg.bookRate=Math.min(100,Math.max(1,+e.target.value||1));save();render()};
+$("sBuf").onchange=e=>{S.cfg.buffer=Math.max(0,+e.target.value||0);save();render()};$("sMaxDay").onchange=e=>{S.cfg.maxDay=Math.max(1,+e.target.value||1);save();render()};
+$("sForm").onchange=e=>{const u=e.target.value.trim();if(u&&!okUrl(u)){alert("Use an https:// link.");return}S.cfg.formUrl=u;save();render()};
+$("fRev").addEventListener("submit",ev=>{if(ev.submitter?.value!=="ok")return;const f=ev.target.elements;const o={id:ed2||uid(),name:f.name.value.trim(),date:f.date.value,rating:Math.min(5,Math.max(1,+f.rating.value||5)),display:f.display.value,text:f.text.value.trim(),gloss:f.gloss.value.trim(),before:f.before.value.trim(),after:f.after.value.trim(),best:f.best.value.trim(),improve:f.improve.value.trim(),recommend:f.recommend.checked,news:f.news.checked};
+ const i=S.reviews.findIndex(x=>x.id===o.id);i>=0?S.reviews[i]=o:S.reviews.push(o);save();render()});
+$("fBlk").addEventListener("submit",ev=>{if(ev.submitter?.value!=="ok")return;const f=ev.target.elements;S.blocks.push({id:uid(),title:f.title.value.trim(),date:f.date.value,end:f.end.value||f.date.value,from:f.from.value,to:f.to.value});save();render()});
+// CSV import (Google Form responses). Contact columns are ignored on purpose.
+function parseCSV(t){const rows=[];let r=[],c="",q=false;for(let i=0;i<t.length;i++){const ch=t[i];if(q){if(ch==='"'){if(t[i+1]==='"'){c+='"';i++}else q=false}else c+=ch}else if(ch==='"')q=true;else if(ch===","){r.push(c);c=""}else if(ch==="\n"||ch==="\r"){if(ch==="\r"&&t[i+1]==="\n")i++;r.push(c);c="";rows.push(r);r=[]}else c+=ch}if(c||r.length){r.push(c);rows.push(r)}return rows.filter(x=>x.some(v=>v.trim()))}
+$("revImp").onclick=()=>$("revFile").click();
+$("revFile").onchange=async e=>{try{const rows=parseCSV(await e.target.files[0].text());const hi=Math.max(0,rows.findIndex(r=>r.some(x=>x.includes("ประทับเวลา"))||(r.some(x=>x.includes("คะแนน"))&&r.some(x=>x.includes("ชื่อ")))));const h=rows[hi].map(x=>x.trim());const col=k=>h.findIndex(x=>x.includes(k));
+ const ix={ts:col("ประทับเวลา"),name:col("ชื่อ"),rate:col("คะแนน"),text:col("รีวิว"),before:col("ติดปัญหา"),after:col("หลังปรึกษา"),best:col("ประโยชน์ที่สุด"),imp:col("ปรับปรุง"),rec:col("แนะนำ"),pub:col("เผยแพร่"),news:col("ข่าวสาร")};
+ if(ix.name<0||ix.rate<0||ix.text<0)throw 0;let add=0;
+ rows.slice(hi+1).forEach(r=>{const g=i=>i>=0?(r[i]||"").trim():"";const m=g(ix.ts).match(/(\d+)\/(\d+)\/(\d+)/);const date=m?m[3]+"-"+pad(+m[2])+"-"+pad(+m[1]):TODAY;const name=g(ix.name);if(!name||S.reviews.some(x=>x.name===name&&x.date===date))return;
+  const p=g(ix.pub);const display=!p||/ไม่อนุญาต/.test(p)?"none":/ปิดชื่อ/.test(p)?"anon":/ชื่อต้น/.test(p)?"first":/อนุญาต/.test(p)?"full":"none";
+  S.reviews.push({id:uid(),name,date,rating:Math.min(5,Math.max(1,+g(ix.rate)||5)),display,text:g(ix.text),gloss:"",before:g(ix.before),after:g(ix.after),best:g(ix.best),improve:g(ix.imp),recommend:/แนะนำ/.test(g(ix.rec))&&!/ไม่/.test(g(ix.rec)),news:/ต้องการ/.test(g(ix.news))&&!/ไม่/.test(g(ix.news))});add++});
+ save();render();alert(add+" new review(s) imported. Phone and email columns were ignored.")}catch(x){alert("Could not read that file. Export the form responses as CSV and try again.")}e.target.value=""};
+
+
 let YEAR=today.getFullYear();
 function years(){const ys=new Set([today.getFullYear()]);[...S.income,...S.expenses].forEach(x=>x.date&&ys.add(+x.date.slice(0,4)));return [...ys].sort((a,b)=>b-a)}
 function render(){
@@ -141,7 +523,7 @@ function render(){
  // trend
  const mx=Math.max(1,...mon),W=520,H=170,bw=W/12;
  let t=`<svg viewBox="0 0 ${W} ${H+24}" width="100%" role="img" aria-label="Revenue per month">`;
- mon.forEach((v,i)=>{const h=v/mx*H;t+=`<rect x="${i*bw+7}" y="${H-h}" width="${bw-14}" height="${h}" rx="3" fill="var(--rose)" opacity="${v?1:.15}"><title>${MN[i]}: ${fmt(v)}</title></rect><text x="${i*bw+bw/2}" y="${H+15}" text-anchor="middle" font-size="10" fill="var(--mute)">${MN[i]}</text>`});
+ mon.forEach((v,i)=>{const h=v/mx*H;t+=`<rect x="${i*bw+7}" y="${H-h}" width="${bw-14}" height="${h}" rx="3" fill="var(--rose)" opacity="${v?1:.15}"><title>My Scholargirl</title></rect><text x="${i*bw+bw/2}" y="${H+15}" text-anchor="middle" font-size="10" fill="var(--mute)">${MN[i]}</text>`});
  if(avg){const y=H-avg/mx*H;t+=`<line x1="0" x2="${W}" y1="${y}" y2="${y}" stroke="var(--tan)" stroke-width="1.5" stroke-dasharray="4 4"/><text x="${W}" y="${y-4}" text-anchor="end" font-size="10" fill="var(--mute)">Avg ${fmt(avg)}</text>`}
  $("trend").innerHTML=rev||true?t+"</svg>":"";
  // channels
@@ -183,6 +565,8 @@ function render(){
  $("expRows").innerHTML=[...S.expenses].sort((a,b)=>b.date.localeCompare(a.date)).map(e=>`<tr><td>${fdate(e.date)}</td><td>${esc(e.cat)}</td><td>${esc(e.note)}</td><td class="n">${fmt(e.amount)}</td><td class="n"><button class="btn alt sm" data-editx="${e.id}">Edit</button> <button class="btn alt sm" data-delx="${e.id}">Delete</button></td></tr>`).join("")||'<tr><td colspan="5" class="empty">No expenses yet.</td></tr>';
  $("chList").innerHTML=[...new Set(["TikTok","LINE","Instagram",...S.income.map(i=>i.channel).filter(Boolean)])].map(c=>`<option value="${esc(c)}">`).join("");
  $("taxRate").value=S.taxRate;
+ render2();
+ render3();
 }
 // dialogs
 let editing=null;
@@ -207,7 +591,7 @@ document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)r
  else if(t.dataset.v){document.querySelectorAll(".nav").forEach(n=>n.classList.toggle("on",n===t));document.querySelectorAll(".view").forEach(v=>v.classList.toggle("on",v.id==="v-"+t.dataset.v))}});
 $("year").onchange=e=>{YEAR=+e.target.value;render()};
 $("taxRate").onchange=e=>{S.taxRate=Math.min(100,Math.max(0,+e.target.value||0));save();render()};
-$("exp").onclick=()=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify(S,null,2)],{type:"application/json"}));a.download="scholargirl-cfo-backup.json";a.click()};
+$("exp").onclick=()=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify(S,null,2)],{type:"application/json"}));a.download="my-scholargirl-backup.json";a.click()};
 $("imp").onclick=()=>$("file").click();
 $("file").onchange=async e=>{try{const j=JSON.parse(await e.target.files[0].text());if(!Array.isArray(j.income)||!Array.isArray(j.expenses))throw 0;S=j;save();render()}catch(x){alert("That file is not a valid backup.")}};
 $("reset").onclick=()=>{if(confirm("Replace all data with the starter data?")){S=STARTER();save();render()}};
@@ -246,6 +630,36 @@ function report(){
  const fut=S.income.filter(i=>i.status!=="received").sort((a,b)=>(a.date||"9999").localeCompare(b.date||"9999"));
  add("Outlook",[["Expected date","Client","Channel","Note","Status","Amount"],...fut.map(i=>[i.date||"Date TBD",i.client,chan(i),i.note,i.status,i.amount]),
   ["","","","","Committed",fut.filter(i=>i.status==="committed").reduce((a,i)=>a+i.amount,0)],["","","","","Projected",fut.filter(i=>i.status==="projected").reduce((a,i)=>a+i.amount,0)]],[14,18,16,30,12,12]);
+
+ // ----- v3 sheets -----
+ const cf=S.cfg;
+ const sess=[...S.sessions].sort((a,b)=>a.date.localeCompare(b.date));
+ add("Sessions",[["Date","Time","Client","Course","Hours","Price","Status","Paid","Channel"],...sess.map(x=>[x.date,x.time||"",x.client,cname(x.course),x.hours,x.price,x.status,x.paid?"yes":"no",x.channel||"Not set"]),["","","","Total",{t:"n",f:"SUM(E2:E"+(sess.length+1)+")",v:sess.reduce((a,x)=>a+x.hours,0)},{t:"n",f:"SUM(F2:F"+(sess.length+1)+")",v:sess.reduce((a,x)=>a+x.price,0)},"","",""]],[12,8,16,34,8,10,12,6,14]);
+ const ld=[...S.leads].sort((a,b)=>a.date.localeCompare(b.date));
+ add("Customers",[["Date","Client","Channel","Stage","Interested in","Note"],...ld.map(l=>[l.date,l.client,l.channel||"Not set",l.stage,l.interest,l.note])],[12,16,16,10,30,30]);
+ const chs=[...new Set([...ld.map(l=>l.channel||"Not set"),...S.income.filter(i=>i.status==="received").map(chan)])];
+ add("Channel funnel",[["Channel","Enquiries","Booked","Paid","Enquiry to paid","Revenue received","Per paying customer"],...chs.map((k,i)=>{const r=i+2,q='Customers!C:C,A'+r;
+  const n=ld.filter(l=>(l.channel||"Not set")===k).length,p=ld.filter(l=>(l.channel||"Not set")===k&&l.stage==="paid").length,b=p+ld.filter(l=>(l.channel||"Not set")===k&&l.stage==="booked").length,rv=S.income.filter(x=>x.status==="received"&&chan(x)===k).reduce((a,x)=>a+x.amount,0);
+  return [k,{t:"n",f:"COUNTIFS("+q+")",v:n},{t:"n",f:"COUNTIFS("+q+',Customers!D:D,"booked")+COUNTIFS('+q+',Customers!D:D,"paid")',v:b},{t:"n",f:"COUNTIFS("+q+',Customers!D:D,"paid")',v:p},{t:"n",f:"IF(B"+r+"=0,0,D"+r+"/B"+r+")",v:n?p/n:0,z:"0%"},{t:"n",f:'SUMIFS(Income!F:F,Income!E:E,"received",Income!C:C,A'+r+")",v:rv},{t:"n",f:"IF(D"+r+"=0,0,F"+r+"/D"+r+")",v:p?rv/p:0}]})],[18,11,9,8,14,16,18]);
+ // cost per hour with formulas
+ const cr=[["Cost per hour"],[],["Target hourly rate (THB)",cf.target],["Monthly tools / AI (THB)",cf.tool],["Monthly working hours",cf.work],["Platform fee %",cf.fee],["Other monthly cost (THB)",cf.other],[],["Offer","Price","Live h","Prep h","Review h","Total h","Platform fee","Tools/other cost","Net income","Net per hour","Gross per live hour","vs target"]];
+ S.courses.forEach((c,i)=>{const r=10+i,k=costRow(c);cr.push([c.name,c.price,c.live,c.prep,c.review,{t:"n",f:"C"+r+"+D"+r+"+E"+r,v:k.tot},{t:"n",f:"B"+r+"*$B$6/100",v:k.fee},{t:"n",f:"IF($B$5=0,0,F"+r+"*($B$4+$B$7)/$B$5)",v:k.tool},{t:"n",f:"B"+r+"-G"+r+"-H"+r,v:k.net},{t:"n",f:"IF(F"+r+"=0,0,I"+r+"/F"+r+")",v:k.nph},{t:"n",f:"IF(C"+r+"=0,0,B"+r+"/C"+r+")",v:k.gross},{t:"n",f:"J"+r+"-$B$3",v:k.vs}])});
+ add("Cost per hour",cr,[34,10,8,8,9,8,12,16,12,12,16,10]);
+ add("Courses",[["Offer","Price","Notes"],...S.courses.map(c=>[c.name,c.price,c.note]),[],["IELTS R+L structure"],["Week","Focus","Client does","Stamp delivers"],...STRUCT],[34,10,50,50]);
+
+ // ----- v4 sheets -----
+ add("Reviews",[["Date","Name","Rating","Review","Translation","Before","After","Most useful","To improve","Recommend","Public display"],...[...S.reviews].sort((a,b)=>a.date.localeCompare(b.date)).map(r=>[r.date,r.name,r.rating,r.text,r.gloss,r.before,r.after,r.best,r.improve,r.recommend?"yes":"no",r.display==="none"?"not allowed":dispName(r)]),[],["Contact details are not stored in the dashboard."]],[12,12,8,40,30,30,40,40,30,10,16]);
+ {const nc=S.comps.length,nt=S.tiers.length,L=n=>String.fromCharCode(65+n);const rows=[["Pricing tiers"],[],["Item","Hours / unit",...S.tiers.map(t=>t.n)]];
+  S.comps.forEach((c,i)=>rows.push([c[0],c[1],...S.tiers.map(t=>t.q[i])]));
+  const f=3,l=2+nc,hr=l+1;const thv=S.tiers.map(t=>t.q.reduce((a,q,i)=>a+q*S.comps[i][1],0));
+  rows.push(["Total hours",""," ".repeat(0)].slice(0,2).concat(S.tiers.map((t,j)=>({t:"n",f:"SUMPRODUCT($B$"+f+":$B$"+l+","+L(2+j)+f+":"+L(2+j)+l+")",v:thv[j]}))));
+  rows.push(["Price (THB)",""].concat(S.tiers.map(t=>t.p)));
+  rows.push(["Net per hour",""].concat(S.tiers.map((t,j)=>({t:"n",f:"IF("+L(2+j)+hr+"=0,0,"+L(2+j)+(hr+1)+"*(1-"+cf.fee+"/100)/"+L(2+j)+hr+")",v:thv[j]?t.p*(1-cf.fee/100)/thv[j]:0}))));
+  rows.push(["vs target ("+cf.target+")",""].concat(S.tiers.map((t,j)=>({t:"n",f:L(2+j)+(hr+2)+"-"+cf.target,v:(thv[j]?t.p*(1-cf.fee/100)/thv[j]:0)-cf.target}))));
+  add("Pricing tiers",rows,[40,12,...S.tiers.map(()=>12)])}
+ add("Quotations",[["No.","Date","Valid until","Client","Total","Status"],...[...S.quotes].sort((a,b)=>a.no.localeCompare(b.no)).map(q=>[q.no,q.date,q.valid,q.client,q.total,q.status])],[16,12,12,20,12,10]);
+ {const cc=conflicts();add("Calendar",[["Date","Time","Type","What","Check"],...cc.ev.map(e=>[e.d,e.t,e.k==="s"?"Session":"Blocked",e.what,(cc.msgs[e.id]||["OK"]).join("; ")])],[12,14,10,36,60])}
+ add("Operations",[["Area","Item","Done"],...OPS0.map((o,i)=>[o[0],o[1],S.ops[i]?"yes":"no"])],[12,90,8]);
  XLSX.writeFile(wb,"Scholargirl_Business_Report_"+y+".xlsx");
 }
 $("xlsx1").onclick=$("xlsx2").onclick=report;
