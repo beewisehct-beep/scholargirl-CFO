@@ -88,11 +88,11 @@ table.qt{width:100%;border-collapse:collapse}table.qt th{background:#5a3a28;colo
  <div class="card"><h2>Income by channel</h2><div class="donut"><svg id="donut" width="130" height="130" viewBox="0 0 42 42"></svg><div id="donutLeg" class="note" style="line-height:1.9"></div></div><div id="chBars"></div></div>
 </div>
 <div class="grid k2">
- <div class="card"><h2>Income outlook (next 6 months)</h2><div class="lbl" style="color:var(--green)">Committed + projected</div><div class="big" id="oTot"></div><div class="note" id="oNote"></div><div id="outlook"></div><div class="leg"><span style="--c:var(--green)">Committed</span><span style="--c:var(--tan)">Projected</span></div></div>
- <div class="card"><h2>Business expenses</h2><div class="big" style="font-size:28px" id="eTot"></div><div id="eBars"></div></div>
+ <div class="card"><div class="tools" style="justify-content:space-between"><h2 style="margin:0">Income outlook (next 6 months)</h2><button class="btn sm" data-add="income" data-st="committed">+ Add expected income</button></div><div class="lbl" style="color:var(--green)">Committed + projected</div><div class="big" id="oTot"></div><div class="note" id="oNote"></div><div id="outlook"></div><div class="leg"><span style="--c:var(--green)">Committed</span><span style="--c:var(--tan)">Projected</span></div><div class="note" style="margin-top:6px">Click a month bar to add expected income for that month. Edit or delete items in the table <b>Upcoming income</b> below.</div></div>
+ <div class="card"><div class="tools" style="justify-content:space-between"><h2 style="margin:0">Business expenses</h2><button class="btn sm" data-add="expense">+ Add expense</button></div><div class="big" style="font-size:28px" id="eTot"></div><div id="eBars"></div><div class="note" style="margin-top:8px">Edit or delete expenses in the <b>Expenses</b> tab.</div></div>
 </div>
 <div class="grid k2">
- <div class="card"><h2>Upcoming income</h2><div class="tw"><table><thead><tr><th>Date</th><th>Client / source</th><th>Channel</th><th>Status</th><th class="n">Amount</th><th></th></tr></thead><tbody id="upc"></tbody></table></div></div>
+ <div class="card"><div class="tools" style="justify-content:space-between"><h2 style="margin:0">Upcoming income</h2><button class="btn sm" data-add="income" data-st="committed">+ Add</button></div><div class="tw"><table><thead><tr><th>Date</th><th>Client / source</th><th>Channel</th><th>Status</th><th class="n">Amount</th><th></th></tr></thead><tbody id="upc"></tbody></table></div></div>
  <div class="card"><h2>Insights</h2><div id="ins"></div></div>
 </div>
 </section>
@@ -112,7 +112,7 @@ table.qt{width:100%;border-collapse:collapse}table.qt th{background:#5a3a28;colo
 <div class="card tw" style="margin-bottom:14px"><h2>My calendar table</h2><div class="note" style="margin-bottom:6px">Sessions and blocked time together, with conflict checks (overlaps, tight gaps, long days).</div><table><thead><tr><th>Date</th><th>Time</th><th>Type</th><th>What</th><th>Check</th><th></th></tr></thead><tbody id="calRows"></tbody></table></div>
 <div class="card"><h2>Google Calendar</h2><div id="calBox"></div></div></section>
 
-<section class="view" id="v-courses"><header><div><h1>Courses</h1><div class="sub">What I offer, how each one runs, and what the client gets each week.</div></div></header>
+<section class="view" id="v-courses"><header><div><h1>Courses</h1><div class="sub">What I offer, how each one runs, and what the client gets each week. Click any text in the tables to edit it.</div></div><button class="btn" data-add="course">+ Add course</button></header>
 <div class="grid k3" id="courseCards"></div>
 <div class="card tw" style="margin-bottom:14px"><h2>IELTS Reading + Listening: 4-week structure</h2><table><thead><tr><th>Week</th><th>Focus</th><th>Client does</th><th>Stamp delivers</th></tr></thead><tbody id="struct"></tbody></table></div>
 <div class="grid k2"><div class="card"><h2>How my course differs: AI-tailored learning path</h2><div id="diff"></div></div><div class="card"><h2>What I do not do</h2><div id="dont"></div></div></div></section>
@@ -161,7 +161,7 @@ table.qt{width:100%;border-collapse:collapse}table.qt th{background:#5a3a28;colo
 
 <section class="view" id="v-settings"><header><div><h1>Settings</h1></div></header>
 <div class="card" style="max-width:520px"><label class="lbl">Tax set-aside rate (%)</label><input id="taxRate" type="number" min="0" max="100" step="0.5"><div class="two" style="margin-top:14px"><div><label class="lbl">Monthly income goal (฿)</label><input id="sGoal" type="number" min="0"></div><div></div></div><label class="lbl" style="margin-top:14px;display:block">Google Form review link (https)</label><input id="sForm" placeholder="https://forms.gle/..."><div class="two" style="margin-top:10px"><div><label class="lbl">Buffer between sessions (min)</label><input id="sBuf" type="number" min="0"></div><div><label class="lbl">Max live hours per day</label><input id="sMaxDay" type="number" min="1" step="0.5"></div></div><label class="lbl" style="margin-top:14px;display:block">Google Calendar booking link (appointment schedule, https)</label><input id="sBook" placeholder="https://calendar.app.google/..."><label class="lbl" style="margin-top:10px;display:block">Google Calendar embed link (optional)</label><input id="sEmbed" placeholder="https://calendar.google.com/calendar/embed?src=..."><div class="note" style="margin-top:6px">Your calendar cannot be read automatically. The booking link opens your Google booking page; the embed shows a calendar you have made public or shared. Sessions you add here get an Add-to-Google-Calendar button. Your own saving target, not tax advice. Check actual tax rules with the Revenue Department or an accountant.</div>
-<div style="margin-top:18px" class="tools"><button class="btn" id="xlsx2">Download Excel report</button><button class="btn alt" id="exp">Export backup (JSON)</button><button class="btn alt" id="imp">Import backup</button><input type="file" id="file" accept=".json" hidden><button class="btn alt" id="reset">Reset to starter data</button></div>
+<div style="margin-top:18px" class="tools"><button class="btn" id="xlsx2">Download Excel report</button><button class="btn alt" id="exp">Export backup (JSON)</button><button class="btn alt" id="imp">Import backup</button><input type="file" id="file" accept=".json" hidden><button class="btn alt" id="reset">Reset to starter data</button><button class="btn alt" id="clearAll">Clear all entries (start blank)</button></div>
 <div class="note" style="margin-top:8px">Data is saved only in this browser. Use Export to back it up or move it to another device.</div></div></section>
 <footer>Clients shown by nickname only. Forecast and projected amounts are expectations, not guaranteed income.</footer>
 </main></div>
@@ -171,11 +171,17 @@ table.qt{width:100%;border-collapse:collapse}table.qt th{background:#5a3a28;colo
 <div class="two"><div><label>Channel</label><input name="channel" list="chList" placeholder="e.g. TikTok, LINE" maxlength="40"></div><div><label>Amount (฿)</label><input name="amount" type="number" min="0" step="1" required></div></div>
 <datalist id="chList"></datalist>
 <div class="two"><div><label>Date received / expected</label><input name="date" type="date"></div><div><label>Status</label><select name="status"><option value="received">Received</option><option value="committed">Committed (confirmed, will pay)</option><option value="projected">Projected (maybe)</option></select></div></div>
-<label>Note</label><input name="note" maxlength="80" placeholder="e.g. SOP review"><div class="acts"><button type="button" class="btn alt" data-close>Cancel</button><button class="btn" value="ok">Save</button></div></form></dialog>
+<label>Note</label><input name="note" maxlength="80" placeholder="e.g. SOP review">
+<label>Payment slip (image)</label><input name="slipf" type="file" accept="image/*"><div class="note" id="slipInfoInc"></div>
+<label>Google Drive link to the slip (optional)</label><input name="slipUrl" maxlength="300" placeholder="https://drive.google.com/...">
+<label class="chk"><input type="checkbox" name="slipdel"><span>Remove attached slip</span></label><div class="acts"><button type="button" class="btn alt" data-close>Cancel</button><button class="btn" value="ok">Save</button></div></form></dialog>
 <dialog id="dlgExp"><form method="dialog" id="fExp"><h2 id="tExp">Add expense</h2>
 <div class="two"><div><label>Category</label><input name="cat" list="catList" required maxlength="40" placeholder="e.g. Software & tools"></div><div><label>Amount (฿)</label><input name="amount" type="number" min="0" step="1" required></div></div>
 <datalist id="catList"><option>Software & tools</option><option>Ads / marketing</option><option>Platform fees</option><option>Equipment</option><option>Other</option></datalist>
 <div><label>Date</label><input name="date" type="date" required></div><label>Note</label><input name="note" maxlength="80">
+<label>Receipt / slip (image)</label><input name="slipf" type="file" accept="image/*"><div class="note" id="slipInfoExp"></div>
+<label>Google Drive link to the receipt (optional)</label><input name="slipUrl" maxlength="300" placeholder="https://drive.google.com/...">
+<label class="chk"><input type="checkbox" name="slipdel"><span>Remove attached receipt</span></label>
 <div class="acts"><button type="button" class="btn alt" data-close>Cancel</button><button class="btn" value="ok">Save</button></div></form></dialog>
 
 
@@ -202,6 +208,13 @@ table.qt{width:100%;border-collapse:collapse}table.qt th{background:#5a3a28;colo
 <label>Before: problem</label><input name="before" maxlength="300"><label>After: what they got</label><input name="after" maxlength="300"><label>Most useful</label><input name="best" maxlength="300"><label>To improve</label><input name="improve" maxlength="300">
 <label class="chk"><input type="checkbox" name="recommend" checked><span>Would recommend</span></label><label class="chk"><input type="checkbox" name="news"><span>Agreed to receive news (keep the email only in your private sheet)</span></label>
 <div class="acts"><button type="button" class="btn alt" data-close>Cancel</button><button class="btn" value="ok">Save</button></div></form></dialog>
+<dialog id="dlgAsk"><form method="dialog"><h2>Please confirm</h2><p id="askMsg" style="margin:10px 0"></p><div class="acts"><button class="btn alt" value="no">Cancel</button><button class="btn" value="yes">Yes, do it</button></div></form></dialog>
+<dialog id="dlgSay"><form method="dialog"><p id="sayMsg" style="margin:6px 0 12px"></p><div class="acts"><button class="btn" value="ok">OK</button></div></form></dialog>
+<dialog id="dlgCourse"><form method="dialog" id="fCourse"><h2 id="tCourse">Course</h2><label>Name</label><input name="name" required maxlength="80">
+<div class="two"><div><label>Price (฿)</label><input name="price" type="number" min="0" step="1" required></div><div><label>Live hours</label><input name="live" type="number" min="0" step="0.25" value="1"></div></div>
+<div class="two"><div><label>Prep hours</label><input name="prep" type="number" min="0" step="0.25" value="0"></div><div><label>Review hours</label><input name="review" type="number" min="0" step="0.25" value="0"></div></div>
+<label>Note</label><input name="note" maxlength="200"><div class="acts"><button type="button" class="btn alt" data-close>Cancel</button><button class="btn" value="ok">Save</button></div></form></dialog>
+<dialog id="dlgSlip"><form method="dialog"><h2>Payment slip / receipt</h2><div id="slipBody" style="margin:10px 0"></div><div class="note">Slips can show account numbers. They are stored only in this browser (and in your backup file). Keep the original in Google Drive.</div><div class="acts"><button class="btn" value="ok">Close</button></div></form></dialog>
 <dialog id="dlgBlk"><form method="dialog" id="fBlk"><h2 id="tBlk">Block time</h2><label>Title</label><input name="title" required maxlength="80" placeholder="e.g. Brisbane trip, exam, travel">
 <div class="two"><div><label>Start date</label><input name="date" type="date" required></div><div><label>End date</label><input name="end" type="date"></div></div>
 <div class="two"><div><label>Start time (optional)</label><input name="from" type="time"></div><div><label>End time (optional)</label><input name="to" type="time"></div></div>
@@ -218,7 +231,11 @@ const STARTER=()=>({taxRate:10,income:[
  {id:"s4",client:"Fluke",channel:"",note:"Remaining (set the date)",amount:2000,date:"",status:"committed"}],expenses:[]});
 let S;try{S=JSON.parse(localStorage.getItem(KEY))}catch(e){}
 if(!S||!S.income)S=STARTER();
-const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+let saveWarned=false;
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){if(!saveWarned){saveWarned=true;setTimeout(()=>say("Could not save in this browser (storage full or blocked). Use Settings > Export backup to keep your data."),0)}}};
+let askCb=null;
+function ask(msg,cb){askCb=cb;$("askMsg").textContent=msg;$("dlgAsk").showModal()}
+function say(msg){$("sayMsg").textContent=msg;$("dlgSay").showModal()}
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const fmt=n=>(n<0?"-":"")+"฿"+Math.round(Math.abs(n)).toLocaleString("en-US");
@@ -255,6 +272,7 @@ S.courses=S.courses||COURSES0;S.templates=S.templates||TPL0;S.checks=S.checks||{
 S.sessions=S.sessions||[];
 S.leads=S.leads||[{id:"l1",client:"Mai",channel:"",date:TODAY,stage:"paid",interest:"Consult",note:""},{id:"l2",client:"Fluke",channel:"",date:TODAY,stage:"paid",interest:"Consult / package",note:""},{id:"l3",client:"Pure",channel:"",date:TODAY,stage:"enquiry",interest:"IELTS Reading + Listening",note:""}];
 S.cfg=Object.assign({goal:5000,target:400,tool:0,other:0,work:40,fee:0,book:"",embed:""},S.cfg||{});
+const DEFBOOK="https://calendar.app.google/qKPKVMyimKzVjzz77";if(!S.cfg.book&&!S.cfg.bookTouched)S.cfg.book=DEFBOOK;
 save();
 const cname=id=>(S.courses.find(c=>c.id===id)||{}).name||"";
 const okUrl=(u,host)=>{try{const x=new URL(u);return x.protocol==="https:"&&(!host||x.hostname===host)?x.href:""}catch(e){return""}};
@@ -279,7 +297,7 @@ function render2(){
  const mk=T.slice(0,7),mh=S.sessions.filter(x=>x.date.slice(0,7)===mk&&x.status!=="cancelled").reduce((a,x)=>a+x.hours,0);$("sMo").textContent=mh+" h";$("sMoN").textContent="of "+cf.work+" working hours ("+Math.round(mh/Math.max(1,cf.work)*100)+"%)";
  $("sesRows").innerHTML=ses.filter(x=>x.status!=="cancelled").map(x=>`<tr><td>${fdate(x.date)}<br><span class="note">${esc(x.time||"")}</span></td><td>${esc(x.client)}</td><td>${esc(cname(x.course))}</td><td class="n">${x.hours}</td><td class="n">${fmt(x.price)}<br><span class="pill p-${x.paid?"received":"committed"}">${x.paid?"paid":"unpaid"}</span></td><td class="n"><a class="btn alt sm" target="_blank" rel="noopener noreferrer" href="${gcal(x)}">+ Google Cal</a> <button class="btn alt sm" data-sedit="${x.id}">Edit</button> <button class="btn alt sm" data-sdel="${x.id}">Delete</button></td></tr>`).join("")||'<tr><td colspan="6" class="empty">No sessions yet. Add one to see expected income here and in Business.</td></tr>';
  const bk=okUrl(cf.book);const bl=$("bookLink");bl.style.display=bk?"":"none";if(bk)bl.href=bk;
- const em=okUrl(cf.embed,"calendar.google.com");$("calBox").innerHTML=em?`<iframe class="cal" src="${esc(em)}" title="Google Calendar"></iframe>`:'<div class="empty">Paste your Google Calendar embed link in Settings to show your calendar here. In Google Calendar: Settings for your calendar → Integrate calendar → Embed code (copy the src link). Make the calendar visible to the people who will view this page.</div>';
+ const em=okUrl(cf.embed,"calendar.google.com");$("calBox").innerHTML=em?`<iframe class="cal" src="${esc(em)}" title="Google Calendar"></iframe>`:`<div class="empty">${bk?`Your booking calendar (Google Calendar appointment schedule):<br><br><a class="btn" href="${esc(bk)}" target="_blank" rel="noopener noreferrer">Open my booking calendar</a><br><br><span class="note">Google does not allow a booking page to be shown inside another page. To see your own calendar here instead, paste its embed link in Settings (Google Calendar > Settings for your calendar > Integrate calendar > Embed code, copy the src link).</span>`:"Paste your Google Calendar booking link or embed link in Settings."}</div>`;
  const groups=[...new Set(CHK0.map(c=>c[0]))];
  $("chk").innerHTML=groups.map(g=>`<div class="grp">${g}</div>`+CHK0.map((c,i)=>[c,i]).filter(([c])=>c[0]===g).map(([c,i])=>`<label class="chk ${S.checks[i]?"done":""}"><input type="checkbox" data-ck="${i}" ${S.checks[i]?"checked":""}><span>${esc(c[1])}</span></label>`).join("")).join("");
  // customers
@@ -298,10 +316,11 @@ function render2(){
  $("cIns").innerHTML=ci.map(i=>`<div class="ins"><span>💡</span><div><b>${esc(i[0])}</b><span class="note">${esc(i[1])}</span></div></div>`).join("");
  $("leadRows").innerHTML=[...L].sort((a,b)=>b.date.localeCompare(a.date)).map(l=>`<tr><td>${fdate(l.date)}</td><td>${esc(l.client)}</td><td>${esc(l.channel||"Not set")}</td><td>${esc(l.interest)}</td><td><span class="pill p-${l.stage==="paid"?"received":l.stage==="lost"?"projected":"committed"}">${STG[l.stage]}</span></td><td class="n"><button class="btn alt sm" data-ledit="${l.id}">Edit</button> <button class="btn alt sm" data-ldel="${l.id}">Delete</button></td></tr>`).join("")||'<tr><td colspan="6" class="empty">No enquiries yet.</td></tr>';
  // courses
- $("courseCards").innerHTML=S.courses.map(c=>{const r=costRow(c);return `<div class="course"><h3>${esc(c.name)}</h3><div class="price">${fmt(c.price)}</div><div class="note">${esc(c.note)}</div><div class="note" style="margin-top:6px">${r.tot} h of work · about ${fmt(r.nph)}/h net</div></div>`}).join("");
- $("struct").innerHTML=STRUCT.map(r=>`<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join("");
- $("diff").innerHTML=DIFF.map(t=>`<div class="ins"><span>✨</span><div>${esc(t)}</div></div>`).join("")+'<div class="warn">Only keep claims that are true of how you really work. Edit the DIFF list in the code.</div>';
- $("dont").innerHTML=DONT.map(t=>`<div class="ins"><span>🚫</span><div>${esc(t)}</div></div>`).join("");
+ $("courseCards").innerHTML=S.courses.map(c=>{const r=costRow(c);return `<div class="course"><h3>${esc(c.name)}</h3><div class="price">${fmt(c.price)}</div><div class="note">${esc(c.note)}</div><div class="note" style="margin-top:6px">${r.tot} h of work · about ${fmt(r.nph)}/h net</div><div class="tools" style="margin-top:8px"><button class="btn alt sm" data-cedit="${c.id}">Edit</button><button class="btn alt sm" data-cdel="${c.id}">Delete</button></div></div>`}).join("")||'<div class="empty">No courses yet. Add one.</div>';
+ S.txt=S.txt||{};const TX=(k,d)=>esc(S.txt[k]??d);
+ $("struct").innerHTML=STRUCT.map((r,i)=>`<tr>${r.map((c,j)=>`<td contenteditable data-tx="st${i}_${j}">${j==0?"<b>"+TX("st"+i+"_"+j,c)+"</b>":TX("st"+i+"_"+j,c)}</td>`).join("")}</tr>`).join("");
+ $("diff").innerHTML=DIFF.map((t,i)=>`<div class="ins"><span>✨</span><div contenteditable data-tx="df${i}">${TX("df"+i,t)}</div></div>`).join("")+'<div class="warn">Only keep claims that are true of how you really work. Click any line to edit.</div>';
+ $("dont").innerHTML=DONT.map((t,i)=>`<div class="ins"><span>🚫</span><div contenteditable data-tx="dn${i}">${TX("dn"+i,t)}</div></div>`).join("");
  // cost
  $("costRows").innerHTML=S.courses.map((c,i)=>{const r=costRow(c);const inp=(k,v)=>`<input class="cell" type="number" min="0" step="0.25" value="${v}" data-cc="${i}:${k}">`;return `<tr><td>${esc(c.name)}</td><td class="n">${inp("price",c.price)}</td><td class="n">${inp("live",c.live)}</td><td class="n">${inp("prep",c.prep)}</td><td class="n">${inp("review",c.review)}</td><td class="n">${r.tot}</td><td class="n">${fmt(r.fee)}</td><td class="n">${fmt(r.tool)}</td><td class="n">${fmt(r.net)}</td><td class="n"><b>${fmt(r.nph)}</b></td><td class="n ${r.vs>=0?"ok":"bad"}">${r.vs>=0?"+":""}${fmt(r.vs)}</td></tr>`}).join("");
  const ins=[];const below=S.courses.filter(c=>costRow(c).vs<0);
@@ -339,11 +358,11 @@ document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)r
  else if(d.add==="lead"){ed2=null;const f=$("fLead");f.reset();$("tLead").textContent="Add enquiry";f.elements.date.value=TODAY;$("dlgLead").showModal()}
  else if(d.add==="tpl"){ed2=null;$("fTpl").reset();$("tTpl").textContent="New template";$("dlgTpl").showModal()}
  else if(d.sedit){const x=S.sessions.find(z=>z.id===d.sedit);ed2=x.id;const f=$("fSes");$("tSes").textContent="Edit session";for(const k of["client","course","date","time","hours","price","channel","status"])f.elements[k].value=x[k]??"";f.elements.paid.checked=!!x.paid;$("dlgSes").showModal()}
- else if(d.sdel){if(confirm("Delete this session and its linked income entry?")){S.sessions=S.sessions.filter(z=>z.id!==d.sdel);S.income=S.income.filter(i=>i.sid!==d.sdel);save();render()}}
+ else if(d.sdel){ask("Delete this session and its linked income entry?",()=>{S.sessions=S.sessions.filter(z=>z.id!==d.sdel);S.income=S.income.filter(i=>i.sid!==d.sdel);save();render()})}
  else if(d.ledit){const x=S.leads.find(z=>z.id===d.ledit);ed2=x.id;const f=$("fLead");$("tLead").textContent="Edit enquiry";for(const k of["client","channel","date","stage","interest","note"])f.elements[k].value=x[k]??"";$("dlgLead").showModal()}
- else if(d.ldel){if(confirm("Delete this enquiry?")){S.leads=S.leads.filter(z=>z.id!==d.ldel);save();render()}}
+ else if(d.ldel){ask("Delete this enquiry?",()=>{S.leads=S.leads.filter(z=>z.id!==d.ldel);save();render()})}
  else if(d.tedit){const x=S.templates.find(z=>z.id===d.tedit);ed2=x.id;const f=$("fTpl");$("tTpl").textContent="Edit template";f.elements.title.value=x.title;f.elements.body.value=x.body;$("dlgTpl").showModal()}
- else if(d.tdel){if(confirm("Delete this template?")){S.templates=S.templates.filter(z=>z.id!==d.tdel);save();render()}}
+ else if(d.tdel){ask("Delete this template?",()=>{S.templates=S.templates.filter(z=>z.id!==d.tdel);save();render()})}
  else if(d.copy){const x=S.templates.find(z=>z.id===d.copy);copy(fillTok(x.body,$("rName").value.trim()));t.textContent="Copied";setTimeout(()=>t.textContent="Copy",1200)}
  else if(d.copytext){copy($("rOut").dataset.msg||"");t.textContent="Copied";setTimeout(()=>t.textContent="Copy",1200)}
 });
@@ -352,8 +371,8 @@ document.addEventListener("change",e=>{const t=e.target;
  else if(t.dataset.cc){const[i,k]=t.dataset.cc.split(":");S.courses[+i][k]=Math.max(0,+t.value||0);save();render()}});
 const cfgMap={sGoal:"goal",sTarget:"target",sTool:"tool",sOther:"other",sWork:"work",sFee:"fee"};
 Object.entries(cfgMap).forEach(([id,k])=>$(id).onchange=e=>{S.cfg[k]=Math.max(0,+e.target.value||0);save();render()});
-$("sBook").onchange=e=>{const u=e.target.value.trim();if(u&&!okUrl(u)){alert("Use an https:// link.");return}S.cfg.book=u;save();render()};
-$("sEmbed").onchange=e=>{const u=e.target.value.trim();if(u&&!okUrl(u,"calendar.google.com")){alert("Use an https://calendar.google.com/... embed link.");return}S.cfg.embed=u;save();render()};
+$("sBook").onchange=e=>{const u=e.target.value.trim();if(u&&!okUrl(u)){say("Use an https:// link.");return}S.cfg.book=u;S.cfg.bookTouched=true;save();render()};
+$("sEmbed").onchange=e=>{const u=e.target.value.trim();if(u&&!okUrl(u,"calendar.google.com")){say("Use an https://calendar.google.com/... embed link.");return}S.cfg.embed=u;save();render()};
 $("chkReset").onclick=()=>{S.checks={};save();render()};
 $("rGo").onclick=recommend;$("rName").oninput=()=>render2();
 $("sesCourse").onchange=e=>{const c=S.courses.find(x=>x.id===e.target.value);if(c){$("fSes").elements.price.value=c.price;$("fSes").elements.hours.value=c.live||1}};
@@ -461,7 +480,7 @@ $("qDisc").oninput=e=>{Q.disc=Math.max(0,+e.target.value||0);qRender()};$("qNote
 $("qTerms").oninput=e=>{Q.terms=e.target.value.split("\n");qRender()};
 document.addEventListener("input",e=>{const t=e.target;if(t.dataset.qi){const [i,k]=t.dataset.qi.split(":");const it=Q.items[+i];it[k]=k==="d"?t.value:Math.max(k==="q"?1:0,+t.value||0);$("qTot").textContent=fmt(qTotal());qRender2()}});
 function qRender2(){const a=document.activeElement,id=a&&a.dataset&&a.dataset.qi,pos=a&&a.selectionStart;qRender();if(id){const n=document.querySelector(`[data-qi="${id}"]`);if(n){n.focus();try{n.setSelectionRange(pos,pos)}catch(x){}}}}
-$("qSave").onclick=()=>{if(!Q.items.length){alert("Add at least one item.");return}const o={id:Q.id||uid(),no:Q.no||qNo(),date:Q.date||T,valid:Q.valid,client:Q.client||"(no name)",items:Q.items,disc:Q.disc,note:Q.note,terms:Q.terms,total:qTotal(),status:(S.quotes.find(x=>x.id===Q.id)||{}).status||"draft"};const i=S.quotes.findIndex(x=>x.id===o.id);i>=0?S.quotes[i]=o:S.quotes.push(o);Q.id=o.id;Q.no=o.no;Q.date=o.date;save();render()};
+$("qSave").onclick=()=>{if(!Q.items.length){say("Add at least one item.");return}const o={id:Q.id||uid(),no:Q.no||qNo(),date:Q.date||T,valid:Q.valid,client:Q.client||"(no name)",items:Q.items,disc:Q.disc,note:Q.note,terms:Q.terms,total:qTotal(),status:(S.quotes.find(x=>x.id===Q.id)||{}).status||"draft"};const i=S.quotes.findIndex(x=>x.id===o.id);i>=0?S.quotes[i]=o:S.quotes.push(o);Q.id=o.id;Q.no=o.no;Q.date=o.date;save();render()};
 $("qPrint").onclick=()=>{document.body.classList.add("printq");window.print();setTimeout(()=>document.body.classList.remove("printq"),500)};
 $("qCopy").onclick=()=>{copy(qText());$("qCopy").textContent="Copied";setTimeout(()=>$("qCopy").textContent="Copy as text",1200)};
 $("qDef").onclick=()=>{S.cfg.qTerms=Q.terms.filter(Boolean);save();$("qDef").textContent="Saved";setTimeout(()=>$("qDef").textContent="Save terms as default",1200)};
@@ -469,16 +488,16 @@ $("qDef").onclick=()=>{S.cfg.qTerms=Q.terms.filter(Boolean);save();$("qDef").tex
 document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)return;const d=t.dataset;
  if(d.qrm){Q.items.splice(+d.qrm,1);qRender()}
  else if(d.qload){const q=S.quotes.find(x=>x.id===d.qload);Q={client:q.client,valid:q.valid,items:q.items.map(i=>({...i})),disc:q.disc,note:q.note,terms:q.terms.slice(),id:q.id,no:q.no,date:q.date};render()}
- else if(d.qdel){if(confirm("Delete this quotation?")){S.quotes=S.quotes.filter(x=>x.id!==d.qdel);save();render()}}
+ else if(d.qdel){ask("Delete this quotation?",()=>{S.quotes=S.quotes.filter(x=>x.id!==d.qdel);save();render()})}
  else if(d.add==="review"){ed2=null;const f=$("fRev");f.reset();$("tRev").textContent="Add review";f.elements.date.value=TODAY;$("dlgRev").showModal()}
  else if(d.add==="block"){ed2=null;const f=$("fBlk");f.reset();f.elements.date.value=TODAY;$("dlgBlk").showModal()}
  else if(d.redit){const r=S.reviews.find(x=>x.id===d.redit);ed2=r.id;const f=$("fRev");$("tRev").textContent="Edit review";for(const k of["name","date","rating","display","text","gloss","before","after","best","improve"])f.elements[k].value=r[k]??"";f.elements.recommend.checked=!!r.recommend;f.elements.news.checked=!!r.news;$("dlgRev").showModal()}
- else if(d.rdel){if(confirm("Delete this review?")){S.reviews=S.reviews.filter(x=>x.id!==d.rdel);save();render()}}
+ else if(d.rdel){ask("Delete this review?",()=>{S.reviews=S.reviews.filter(x=>x.id!==d.rdel);save();render()})}
  else if(d.rcopy){const r=S.reviews.find(x=>x.id===d.rcopy);copy("“"+r.text+"”"+(r.gloss?"\n("+r.gloss+")":"")+"\n— "+dispName(r));t.textContent="Copied";setTimeout(()=>t.textContent="Copy testimonial",1200)}
- else if(d.bdel){if(confirm("Delete this blocked time?")){S.blocks=S.blocks.filter(x=>x.id!==d.bdel);save();render()}}
+ else if(d.bdel){ask("Delete this blocked time?",()=>{S.blocks=S.blocks.filter(x=>x.id!==d.bdel);save();render()})}
 });
 document.addEventListener("change",e=>{const t=e.target,d=t.dataset;
- if(d.qst){const q=S.quotes.find(x=>x.id===d.qst);const was=q.status;q.status=t.value;if(t.value==="accepted"&&was!=="accepted"&&confirm("Add "+fmt(q.total)+" to your income list as committed income (no date yet)?")){S.income.push({id:uid(),qid:q.id,client:q.client,channel:"",note:q.no,amount:q.total,date:"",status:"committed"})}save();render()}
+ if(d.qst){const q=S.quotes.find(x=>x.id===d.qst);const was=q.status;q.status=t.value;save();if(t.value==="accepted"&&was!=="accepted"){ask("Add "+fmt(q.total)+" to your income list as committed income (no date yet)?",()=>{S.income.push({id:uid(),qid:q.id,client:q.client,channel:"",note:q.no,amount:q.total,date:"",status:"committed"});save();render()})}render()}
  else if(d.ops!==undefined){S.ops[d.ops]=t.checked;save();render()}
  else if(d.pcomp!==undefined){S.comps[+d.pcomp][1]=Math.max(0,+t.value||0);save();render()}
  else if(d.ptq){const[j,i]=d.ptq.split(":");S.tiers[+j].q[+i]=Math.max(0,+t.value||0);save();render()}
@@ -486,7 +505,7 @@ document.addEventListener("change",e=>{const t=e.target,d=t.dataset;
  else if(d.ppl){const[j,m]=d.ppl.split(":");(S.plan[+j]=S.plan[+j]||[0,0,0])[+m]=Math.max(0,+t.value||0);save();render()}});
 $("pClose").onchange=e=>{S.cfg.closeRate=Math.min(100,Math.max(1,+e.target.value||1));save();render()};$("pBook").onchange=e=>{S.cfg.bookRate=Math.min(100,Math.max(1,+e.target.value||1));save();render()};
 $("sBuf").onchange=e=>{S.cfg.buffer=Math.max(0,+e.target.value||0);save();render()};$("sMaxDay").onchange=e=>{S.cfg.maxDay=Math.max(1,+e.target.value||1);save();render()};
-$("sForm").onchange=e=>{const u=e.target.value.trim();if(u&&!okUrl(u)){alert("Use an https:// link.");return}S.cfg.formUrl=u;save();render()};
+$("sForm").onchange=e=>{const u=e.target.value.trim();if(u&&!okUrl(u)){say("Use an https:// link.");return}S.cfg.formUrl=u;save();render()};
 $("fRev").addEventListener("submit",ev=>{if(ev.submitter?.value!=="ok")return;const f=ev.target.elements;const o={id:ed2||uid(),name:f.name.value.trim(),date:f.date.value,rating:Math.min(5,Math.max(1,+f.rating.value||5)),display:f.display.value,text:f.text.value.trim(),gloss:f.gloss.value.trim(),before:f.before.value.trim(),after:f.after.value.trim(),best:f.best.value.trim(),improve:f.improve.value.trim(),recommend:f.recommend.checked,news:f.news.checked};
  const i=S.reviews.findIndex(x=>x.id===o.id);i>=0?S.reviews[i]=o:S.reviews.push(o);save();render()});
 $("fBlk").addEventListener("submit",ev=>{if(ev.submitter?.value!=="ok")return;const f=ev.target.elements;S.blocks.push({id:uid(),title:f.title.value.trim(),date:f.date.value,end:f.end.value||f.date.value,from:f.from.value,to:f.to.value});save();render()});
@@ -499,7 +518,7 @@ $("revFile").onchange=async e=>{try{const rows=parseCSV(await e.target.files[0].
  rows.slice(hi+1).forEach(r=>{const g=i=>i>=0?(r[i]||"").trim():"";const m=g(ix.ts).match(/(\d+)\/(\d+)\/(\d+)/);const date=m?m[3]+"-"+pad(+m[2])+"-"+pad(+m[1]):TODAY;const name=g(ix.name);if(!name||S.reviews.some(x=>x.name===name&&x.date===date))return;
   const p=g(ix.pub);const display=!p||/ไม่อนุญาต/.test(p)?"none":/ปิดชื่อ/.test(p)?"anon":/ชื่อต้น/.test(p)?"first":/อนุญาต/.test(p)?"full":"none";
   S.reviews.push({id:uid(),name,date,rating:Math.min(5,Math.max(1,+g(ix.rate)||5)),display,text:g(ix.text),gloss:"",before:g(ix.before),after:g(ix.after),best:g(ix.best),improve:g(ix.imp),recommend:/แนะนำ/.test(g(ix.rec))&&!/ไม่/.test(g(ix.rec)),news:/ต้องการ/.test(g(ix.news))&&!/ไม่/.test(g(ix.news))});add++});
- save();render();alert(add+" new review(s) imported. Phone and email columns were ignored.")}catch(x){alert("Could not read that file. Export the form responses as CSV and try again.")}e.target.value=""};
+ save();render();say(add+" new review(s) imported. Phone and email columns were ignored.")}catch(x){say("Could not read that file. Export the form responses as CSV and try again.")}e.target.value=""};
 
 
 let YEAR=today.getFullYear();
@@ -541,15 +560,15 @@ function render(){
  fut.forEach(i=>{if(!i.date){i.status==="committed"?und+=i.amount:undP+=i.amount;return}const m=months.find(m=>m.key===i.date.slice(0,7));if(m){i.status==="committed"?m.c+=i.amount:m.p+=i.amount}else if(i.date.slice(0,7)>months[5].key)beyond+=i.amount});
  const comm=fut.filter(i=>i.status==="committed").reduce((a,i)=>a+i.amount,0),proj=fut.filter(i=>i.status==="projected").reduce((a,i)=>a+i.amount,0);
  $("oTot").textContent=fmt(comm+proj);$("oNote").textContent=`Committed ${fmt(comm)} · Projected ${fmt(proj)}`;
- const bars=[...months.map(m=>({l:m.label,c:m.c,p:m.p}))];if(und||undP)bars.push({l:"No date",c:und,p:undP});
+ const bars=[...months.map(m=>({l:m.label,c:m.c,p:m.p,k:m.key}))];if(und||undP)bars.push({l:"No date",c:und,p:undP});
  const om=Math.max(1,...bars.map(b=>b.c+b.p));
- $("outlook").innerHTML=`<svg viewBox="0 0 520 165" width="100%">${bars.map((b,i)=>{const w=520/bars.length,hc=b.c/om*105,hp=b.p/om*105;return `<rect x="${i*w+10}" y="${135-hc-hp}" width="${w-20}" height="${hp}" rx="3" fill="var(--tan)" opacity=".6"/><rect x="${i*w+10}" y="${135-hc}" width="${w-20}" height="${hc}" rx="3" fill="var(--green)"/><text x="${i*w+w/2}" y="151" text-anchor="middle" font-size="10" fill="var(--mute)">${b.l}</text>${b.c+b.p?`<text x="${i*w+w/2}" y="${127-hc-hp}" text-anchor="middle" font-size="10" fill="var(--ink)">${fmt(b.c+b.p)}</text>`:""}`}).join("")}</svg>`+(beyond?`<div class="note">+ ${fmt(beyond)} expected after 6 months</div>`:"");
+ $("outlook").innerHTML=`<svg viewBox="0 0 520 165" width="100%">${bars.map((b,i)=>{const w=520/bars.length,hc=b.c/om*105,hp=b.p/om*105;return `<g data-om="${b.k||""}" style="cursor:pointer"><title>${b.k?"Add expected income":"Items without a date: edit them below"}</title><rect x="${i*w}" y="0" width="${w}" height="160" fill="transparent"/><rect x="${i*w+10}" y="${135-hc-hp}" width="${w-20}" height="${hp}" rx="3" fill="var(--tan)" opacity=".6"/><rect x="${i*w+10}" y="${135-hc}" width="${w-20}" height="${hc}" rx="3" fill="var(--green)"/><text x="${i*w+w/2}" y="151" text-anchor="middle" font-size="10" fill="var(--mute)">${b.l}</text>${b.c+b.p?`<text x="${i*w+w/2}" y="${127-hc-hp}" text-anchor="middle" font-size="10" fill="var(--ink)">${fmt(b.c+b.p)}</text>`:""}</g>`}).join("")}</svg>`+(beyond?`<div class="note">+ ${fmt(beyond)} expected after 6 months</div>`:"");
  // expenses
  const ec={};exs.forEach(e=>ec[e.cat]=(ec[e.cat]||0)+e.amount);$("eTot").textContent=fmt(exp);
  $("eBars").innerHTML=Object.entries(ec).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`<div class="row"><div class="top"><span>${esc(k)}</span><span>${fmt(v)}</span></div><div class="bar"><i style="width:${v/exp*100}%;background:var(--tan)"></i></div></div>`).join("")||'<div class="empty">No expenses yet. Add one to see profit.</div>';
  // upcoming
  const up=[...fut].sort((a,b)=>(a.date||"9999").localeCompare(b.date||"9999"));
- $("upc").innerHTML=up.map(i=>`<tr><td>${fdate(i.date)}</td><td>${esc(i.client)}</td><td>${esc(chan(i))}</td><td><span class="pill p-${i.status}">${i.status}</span></td><td class="n">${fmt(i.amount)}</td><td class="n"><button class="btn sm" data-recv="${i.id}">Mark received</button></td></tr>`).join("")||'<tr><td colspan="6" class="empty">Nothing upcoming. Add expected income.</td></tr>';
+ $("upc").innerHTML=up.map(i=>`<tr><td>${fdate(i.date)}</td><td>${esc(i.client)}</td><td>${esc(chan(i))}</td><td><span class="pill p-${i.status}">${i.status}</span></td><td class="n">${fmt(i.amount)}</td><td class="n"><button class="btn sm" data-recv="${i.id}">Mark received</button> <button class="btn alt sm" data-edit="${i.id}">Edit</button> <button class="btn alt sm" data-del="${i.id}">Delete</button></td></tr>`).join("")||'<tr><td colspan="6" class="empty">Nothing upcoming. Add expected income.</td></tr>';
  // insights
  const I=[];
  if(prev)I.push(["Income is "+(rev>=prev?"up ":"down ")+Math.abs(Math.round((rev-prev)/prev*100))+"%",`${fmt(rev)} this year vs ${fmt(prev)} last year.`]);
@@ -561,8 +580,8 @@ function render(){
  $("ins").innerHTML=I.map(i=>`<div class="ins"><span>💡</span><div><b>${esc(i[0])}</b><span class="note">${esc(i[1])}</span></div></div>`).join("");
  // lists
  const all=[...S.income].sort((a,b)=>(b.date||"9999").localeCompare(a.date||"9999"));
- $("incRows").innerHTML=all.map(i=>`<tr><td>${fdate(i.date)}</td><td>${esc(i.client)}</td><td>${esc(chan(i))}</td><td>${esc(i.note)}</td><td><span class="pill p-${i.status}">${i.status}</span></td><td class="n">${fmt(i.amount)}</td><td class="n"><button class="btn alt sm" data-edit="${i.id}">Edit</button> <button class="btn alt sm" data-del="${i.id}">Delete</button></td></tr>`).join("")||'<tr><td colspan="7" class="empty">No income yet.</td></tr>';
- $("expRows").innerHTML=[...S.expenses].sort((a,b)=>b.date.localeCompare(a.date)).map(e=>`<tr><td>${fdate(e.date)}</td><td>${esc(e.cat)}</td><td>${esc(e.note)}</td><td class="n">${fmt(e.amount)}</td><td class="n"><button class="btn alt sm" data-editx="${e.id}">Edit</button> <button class="btn alt sm" data-delx="${e.id}">Delete</button></td></tr>`).join("")||'<tr><td colspan="5" class="empty">No expenses yet.</td></tr>';
+ $("incRows").innerHTML=all.map(i=>`<tr><td>${fdate(i.date)}</td><td>${esc(i.client)}</td><td>${esc(chan(i))}</td><td>${esc(i.note)}</td><td><span class="pill p-${i.status}">${i.status}</span></td><td class="n">${fmt(i.amount)}</td><td class="n">${slipBtn(i,"inc")}<button class="btn alt sm" data-edit="${i.id}">Edit</button> <button class="btn alt sm" data-del="${i.id}">Delete</button></td></tr>`).join("")||'<tr><td colspan="7" class="empty">No income yet.</td></tr>';
+ $("expRows").innerHTML=[...S.expenses].sort((a,b)=>b.date.localeCompare(a.date)).map(e=>`<tr><td>${fdate(e.date)}</td><td>${esc(e.cat)}</td><td>${esc(e.note)}</td><td class="n">${fmt(e.amount)}</td><td class="n">${slipBtn(e,"exp")}<button class="btn alt sm" data-editx="${e.id}">Edit</button> <button class="btn alt sm" data-delx="${e.id}">Delete</button></td></tr>`).join("")||'<tr><td colspan="5" class="empty">No expenses yet.</td></tr>';
  $("chList").innerHTML=[...new Set(["TikTok","LINE","Instagram",...S.income.map(i=>i.channel).filter(Boolean)])].map(c=>`<option value="${esc(c)}">`).join("");
  $("taxRate").value=S.taxRate;
  render2();
@@ -570,33 +589,54 @@ function render(){
 }
 // dialogs
 let editing=null;
+$("dlgAsk").addEventListener("close",()=>{const v=$("dlgAsk").returnValue,cb=askCb;askCb=null;if(v==="yes"&&cb)cb()});
 function openInc(id){editing=id;const f=$("fInc");f.reset();const i=S.income.find(x=>x.id===id);$("tInc").textContent=i?"Edit income":"Add income";
  if(i)for(const k of["client","channel","amount","date","status","note"])f.elements[k].value=i[k];else f.elements.date.value=TODAY;$("dlgInc").showModal()}
 function openExp(id){editing=id;const f=$("fExp");f.reset();const e=S.expenses.find(x=>x.id===id);$("tExp").textContent=e?"Edit expense":"Add expense";
  if(e)for(const k of["cat","amount","date","note"])f.elements[k].value=e[k];else f.elements.date.value=TODAY;$("dlgExp").showModal()}
+let pendSlip;
+function slipBtn(x,k){return (x.slip||x.slipUrl)?`<button class="btn alt sm" data-slip="${k}:${x.id}">📎 Slip</button> `:""}
+function slipFields(old,f){const o={slip:old&&old.slip||"",slipUrl:f.slipUrl.value.trim()};if(pendSlip!==undefined)o.slip=pendSlip;if(f.slipdel.checked)o.slip="";if(o.slipUrl&&!okUrl(o.slipUrl))o.slipUrl="";return o}
+function compress(file,cb){const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const m=1000,sc=Math.min(1,m/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=Math.round(im.width*sc);c.height=Math.round(im.height*sc);c.getContext("2d").drawImage(im,0,0,c.width,c.height);cb(c.toDataURL("image/jpeg",.65))};im.onerror=()=>say("Could not read that image.");im.src=r.result};r.readAsDataURL(file)}
+for(const [fid,info] of [["fInc","slipInfoInc"],["fExp","slipInfoExp"]])$(fid).elements.slipf.addEventListener("change",e=>{const fl=e.target.files[0];pendSlip=undefined;if(!fl)return;compress(fl,d=>{pendSlip=d;$(info).textContent="Slip ready ("+Math.round(d.length*.75/1024)+" KB). Press Save to attach."})});
+const _oi=openInc,_ox=openExp;
+openInc=function(id){pendSlip=undefined;_oi(id);const x=S.income.find(z=>z.id===id)||{};$("fInc").elements.slipUrl.value=x.slipUrl||"";$("slipInfoInc").textContent=x.slip?"A slip is attached.":""};
+openExp=function(id){pendSlip=undefined;_ox(id);const x=S.expenses.find(z=>z.id===id)||{};$("fExp").elements.slipUrl.value=x.slipUrl||"";$("slipInfoExp").textContent=x.slip?"A receipt is attached.":""};
+document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t||!t.dataset.slip)return;const[k,id]=t.dataset.slip.split(":");const x=(k==="inc"?S.income:S.expenses).find(z=>z.id===id);if(!x)return;const u=okUrl(x.slipUrl);
+ $("slipBody").innerHTML=(x.slip?`<img src="${x.slip}" alt="slip" style="max-width:100%;border-radius:8px"><div class="tools" style="margin-top:8px"><a class="btn alt sm" download="slip-${esc(id)}.jpg" href="${x.slip}">Download image</a></div>`:"")+(u?`<div style="margin-top:8px"><a href="${esc(u)}" target="_blank" rel="noopener noreferrer">Open in Google Drive</a></div>`:"");$("dlgSlip").showModal()});
 $("fInc").addEventListener("submit",ev=>{if(ev.submitter?.value!=="ok")return;const f=ev.target.elements;
  const o={id:editing||uid(),client:f.client.value.trim(),channel:f.channel.value.trim(),note:f.note.value.trim(),amount:Math.max(0,+f.amount.value||0),date:f.date.value,status:f.status.value};
+ Object.assign(o,slipFields(S.income.find(x=>x.id===o.id),f));
  if(o.status==="received"&&!o.date)o.date=TODAY;
  const i=S.income.findIndex(x=>x.id===o.id);i>=0?S.income[i]=o:S.income.push(o);save();render()});
 $("fExp").addEventListener("submit",ev=>{if(ev.submitter?.value!=="ok")return;const f=ev.target.elements;
  const o={id:editing||uid(),cat:f.cat.value.trim(),amount:Math.max(0,+f.amount.value||0),date:f.date.value,note:f.note.value.trim()};
+ Object.assign(o,slipFields(S.expenses.find(x=>x.id===o.id),f));
  const i=S.expenses.findIndex(x=>x.id===o.id);i>=0?S.expenses[i]=o:S.expenses.push(o);save();render()});
 document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)return;
- if(t.dataset.add==="income")openInc();else if(t.dataset.add==="expense")openExp();
+ if(t.dataset.add==="income"){openInc();if(t.dataset.st)$("fInc").elements.status.value=t.dataset.st}else if(t.dataset.add==="expense")openExp();
  else if(t.dataset.close!==undefined)t.closest("dialog").close();
  else if(t.dataset.edit)openInc(t.dataset.edit);else if(t.dataset.editx)openExp(t.dataset.editx);
- else if(t.dataset.del){if(confirm("Delete this income entry?")){S.income=S.income.filter(x=>x.id!==t.dataset.del);save();render()}}
- else if(t.dataset.delx){if(confirm("Delete this expense?")){S.expenses=S.expenses.filter(x=>x.id!==t.dataset.delx);save();render()}}
+ else if(t.dataset.del){ask("Delete this income entry?",()=>{S.income=S.income.filter(x=>x.id!==t.dataset.del);save();render()})}
+ else if(t.dataset.delx){ask("Delete this expense?",()=>{S.expenses=S.expenses.filter(x=>x.id!==t.dataset.delx);save();render()})}
  else if(t.dataset.recv){const i=S.income.find(x=>x.id===t.dataset.recv);i.status="received";if(!i.date||i.date>TODAY)i.date=TODAY;save();render()}
  else if(t.dataset.v){document.querySelectorAll(".nav").forEach(n=>n.classList.toggle("on",n===t));document.querySelectorAll(".view").forEach(v=>v.classList.toggle("on",v.id==="v-"+t.dataset.v))}});
 $("year").onchange=e=>{YEAR=+e.target.value;render()};
 $("taxRate").onchange=e=>{S.taxRate=Math.min(100,Math.max(0,+e.target.value||0));save();render()};
 $("exp").onclick=()=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify(S,null,2)],{type:"application/json"}));a.download="my-scholargirl-backup.json";a.click()};
 $("imp").onclick=()=>$("file").click();
-$("file").onchange=async e=>{try{const j=JSON.parse(await e.target.files[0].text());if(!Array.isArray(j.income)||!Array.isArray(j.expenses))throw 0;S=j;save();render()}catch(x){alert("That file is not a valid backup.")}};
-$("reset").onclick=()=>{if(confirm("Replace all data with the starter data?")){S=STARTER();save();render()}};
+$("file").onchange=async e=>{try{const j=JSON.parse(await e.target.files[0].text());if(!Array.isArray(j.income)||!Array.isArray(j.expenses))throw 0;S=j;save();render()}catch(x){say("That file is not a valid backup.")}};
+document.addEventListener("click",e=>{const g=e.target.closest("[data-om]");if(!g||!g.dataset.om)return;openInc();const f=$("fInc").elements;f.status.value="committed";f.date.value=g.dataset.om+"-15"});
+let edC=null;
+document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)return;const d=t.dataset;
+ if(d.add==="course"||d.cedit){const c=d.cedit?S.courses.find(x=>x.id===d.cedit):null;edC=c?c.id:null;const f=$("fCourse");f.reset();$("tCourse").textContent=c?"Edit course":"Add course";if(c)for(const k of["name","price","live","prep","review","note"])f.elements[k].value=c[k]??"";$("dlgCourse").showModal()}
+ else if(d.cdel){const c=S.courses.find(x=>x.id===d.cdel);ask('Delete course "'+(c?c.name:"")+'"?',()=>{S.courses=S.courses.filter(x=>x.id!==d.cdel);const cs=$("sesCourse");if(cs)delete cs.dataset.f;const qa=$("qAdd");if(qa)delete qa.dataset.f;save();render()})}});
+$("fCourse").addEventListener("submit",ev=>{if(ev.submitter?.value!=="ok")return;const f=ev.target.elements;const o={id:edC||uid(),name:f.name.value.trim(),price:Math.max(0,+f.price.value||0),live:Math.max(0,+f.live.value||0),prep:Math.max(0,+f.prep.value||0),review:Math.max(0,+f.review.value||0),note:f.note.value.trim()};const i=S.courses.findIndex(x=>x.id===o.id);i>=0?S.courses[i]=o:S.courses.push(o);const cs=$("sesCourse");if(cs)delete cs.dataset.f;const qa=$("qAdd");if(qa)delete qa.dataset.f;save();render()});
+document.addEventListener("focusout",e=>{const t=e.target;if(t.dataset&&t.dataset.tx){S.txt=S.txt||{};S.txt[t.dataset.tx]=t.textContent.trim();save()}});
+$("clearAll").onclick=()=>ask("Delete ALL income, expenses, enquiries, sessions, reviews, blocked time and quotations? Courses, templates and settings are kept. This cannot be undone.",()=>{S.income=[];S.expenses=[];S.leads=[];S.sessions=[];S.reviews=[];S.blocks=[];S.quotes=[];save();render()});
+$("reset").onclick=()=>{ask("Replace all data with the starter data?",()=>{S=STARTER();save();render()})};
 function report(){
- if(typeof XLSX==="undefined"){alert("Excel library could not load (check your internet connection) and try again.");return}
+ if(typeof XLSX==="undefined"){say("Excel library could not load (check your internet connection) and try again.");return}
  const y=YEAR,inY=d=>d&&+d.slice(0,4)===y;
  const rc=S.income.filter(i=>i.status==="received"&&inY(i.date)),exs=S.expenses.filter(e=>inY(e.date));
  const rev=rc.reduce((a,i)=>a+i.amount,0),exp=exs.reduce((a,e)=>a+e.amount,0),rate=+S.taxRate||0;
